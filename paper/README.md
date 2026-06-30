@@ -15,5 +15,6 @@ The local workspace also includes a portable Tectonic binary under
 `tools/tectonic-0.16.9/`, and `scripts/audit_latex_preprint.py` uses it to
 compile this package when system TeX tools are unavailable.
 
-Before submission, replace the placeholder author block and finalize funding,
-conflict-of-interest, contribution, and AI-assistance disclosures.
+Before submission, the submitting author should inspect the generated arXiv
+preview against the local PDF and confirm that author metadata, declarations,
+figures, equations, and references render correctly.

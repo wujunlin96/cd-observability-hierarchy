@@ -67,7 +67,12 @@ def main() -> int:
         missing_cites = sorted(cite_keys(tex) - bib_keys(bib))
         if missing_cites:
             errors.append(f"missing bibliography keys: {missing_cites}")
-        if "[@" in tex or re.search(r"^##\s", tex, re.M) or re.search(r"^\|[-:\s|]+\|?$", tex, re.M):
+        if (
+            "[@" in tex
+            or "**" in tex
+            or re.search(r"^##\s", tex, re.M)
+            or re.search(r"^\|[-:\s|]+\|?$", tex, re.M)
+        ):
             errors.append("markdown residue found in LaTeX")
         for fig in re.findall(r"\\includegraphics(?:\[[^\]]+\])?\{([^}]+)\}", tex):
             fig_path = PKG / fig

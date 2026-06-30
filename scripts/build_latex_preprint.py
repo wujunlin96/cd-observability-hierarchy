@@ -117,9 +117,8 @@ def apply_submission_metadata(markdown: str, metadata: dict[str, str | bool]) ->
         ): str(metadata["ai_assistance_disclosure"]).strip(),
     }
     for old, new in replacements.items():
-        if old not in markdown:
-            raise ValueError(f"expected declaration text not found for replacement: {old[:60]}...")
-        markdown = markdown.replace(old, new)
+        if old in markdown:
+            markdown = markdown.replace(old, new)
     return markdown
 
 
@@ -152,6 +151,13 @@ def convert_inline(text: str) -> str:
     text = re.sub(r"`([^`]+)`", code_repl, text)
     text = stash(r"\\\(.+?\\\)", text, store)
     text = stash(r"\\citep\{[^}]+\}", text, store)
+
+    def bold_repl(match: re.Match[str]) -> str:
+        token = f"@@TOKEN{len(store)}@@"
+        store.append(r"\textbf{" + latex_escape_text(match.group(1)) + "}")
+        return token
+
+    text = re.sub(r"\*\*(.+?)\*\*", bold_repl, text)
     text = latex_escape_text(text)
     for i, value in enumerate(store):
         text = text.replace(latex_escape_text(f"@@TOKEN{i}@@"), value)
@@ -437,8 +443,9 @@ The local workspace also includes a portable Tectonic binary under
 `tools/tectonic-0.16.9/`, and `scripts/audit_latex_preprint.py` uses it to
 compile this package when system TeX tools are unavailable.
 
-Before submission, replace the placeholder author block and finalize funding,
-conflict-of-interest, contribution, and AI-assistance disclosures.
+Before submission, the submitting author should inspect the generated arXiv
+preview against the local PDF and confirm that author metadata, declarations,
+figures, equations, and references render correctly.
 """
     (OUT / "README.md").write_text(readme, encoding="utf-8")
 

@@ -14,6 +14,10 @@ This is not a claim of a detected second light speed.
 draft/
   main_observability_hierarchy.md      # Markdown manuscript source
 
+config/
+  submission_metadata.json             # Final author/declaration metadata used for build
+  submission_metadata.template.json
+
 paper/
   main.pdf                             # Current compiled PDF
   main.tex                             # Generated LaTeX source
@@ -90,16 +94,16 @@ python scripts/audit_latex_preprint.py
 
 This is a pre-arXiv public artifact bundle. The manuscript now includes formal no-go propositions, an interface/relative-holonomy morphology vector, and conservative forecast-scale tables.
 
-Remaining arXiv blockers are human submission decisions: final author metadata, license choice, funding/conflict statements, and author inspection of the arXiv-generated preview.
+The technical package is ready for author-side arXiv preview. Remaining blockers are human checks: final reading of the PDF by the author, comparison with the arXiv-generated preview, and endorsement if arXiv requests it.
 
 ## Caution
 
 The manuscript is a no-go/classification framework plus controlled toy calculations. It does not claim:
 
-- evidence for a hidden D world;
+- evidence for a hidden D-sector spacetime;
 - direct observation of a second light speed;
 - novelty for Lorentz violation, varying-speed-of-light models, SME coefficients, disformal metrics, aether theories, hidden photons, sterile-neutrino altered dispersion, or multimetric gravity.
 
 ## License
 
-License choice is pending final author decision. If you reuse or cite material before a license is added, please contact the author.
+For arXiv submission, the author selected the arXiv.org perpetual, non-exclusive license. No separate repository-wide software license has been added yet.

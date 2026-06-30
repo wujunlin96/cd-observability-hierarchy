@@ -1,0 +1,16 @@
+{
+  "ready_for_build": true,
+  "author_name": "Junlin Wu",
+  "affiliation": "Independent Researcher",
+  "email": "wujunlin96@foxmail.com",
+  "funding_statement": "No external funding was received for this work.",
+  "conflict_of_interest_statement": "The author declares no conflicts of interest.",
+  "author_contributions": "The author supplied the motivating C-D question and research direction, reviewed the theoretical claims, and is responsible for the final interpretation and submission. AI assistance was used for mathematical organization, code generation, reproducibility checks, literature-boundary auditing, and manuscript drafting support.",
+  "ai_assistance_disclosure": "The author used AI assistance for mathematical exploration, literature-search organization, manuscript drafting support, code generation, and internal consistency checks. The author is responsible for the final claims, interpretation, and submission.",
+  "arxiv_primary_category": "physics.class-ph",
+  "arxiv_cross_list": "none",
+  "arxiv_comments": "21 pages, 1 figure",
+  "arxiv_license": "arXiv.org perpetual, non-exclusive license",
+  "public_repository_url": "https://github.com/wujunlin96/cd-observability-hierarchy",
+  "journal_followup_plan": "If the arXiv response is constructive, prepare a journal version with either a stronger observational forecast, a sharper theorem/proof presentation, or a more complete interface/holonomy phenomenology section."
+}

@@ -1,10 +1,10 @@
 # A C-D Observability Hierarchy for Multi-Sector Speed Constants
 
-Draft date: 2026-06-30
+Draft date: 2026-07-01
 
 ## Abstract
 
-We study a two-sector thought experiment in which a hidden sector is assigned an internal speed scale \(D\) while the visible sector uses speed scale \(C\). The central question is not whether two numerical constants can be written down, but whether their ratio \(D/C\) has invariant observable content for a visible observer. We show that under exact local Lorentz equivariance, smooth local sector maps, and flat relative sector calibration, it does not. A constant Lorentz-compatible linear map is only a scale map. A smooth Lorentz-equivariant point map sends every Lorentz orbit into itself and maps null rays to null rays. A flat relative calibration connection is pure gauge on a simply connected region, so it has no closed-path observable. Observable C-D physics therefore requires a controlled failure of at least one assumption: preferred hidden fields, relative curvature or holonomy, defects or interfaces, or portal-projected effective coefficients. We propose a visible-relativity protection principle that keeps Standard-Model Lorentz violation below existing bounds while allowing hidden or relative-sector calibration failure. As a worked escape example, we analyze a one-dimensional C-D interface and show that finite wall thickness acts as a momentum filter: forward conversion is controlled by the wall Fourier component at \(k_C-k_D\). The result is not evidence for a hidden D world, but a no-go and classification framework for when a hidden speed scale can become physical.
+We study a two-sector thought experiment in which a hidden sector is assigned an internal speed scale \(D\) while the visible sector uses speed scale \(C\). The central question is not whether two numerical constants can be written down, but whether their ratio \(D/C\) has invariant observable content for a visible observer. We show that under exact local Lorentz equivariance, smooth local sector maps, and flat relative sector calibration, it does not. A constant Lorentz-compatible linear map is only a scale map. A smooth Lorentz-equivariant point map is necessarily radial on each orbit branch, \(F^\mu=\alpha_b(x^2)x^\mu\), and therefore preserves null rays. A flat Abelian relative calibration connection on a simply connected region is pure gauge, so it has no closed-path observable. Observable C-D physics therefore requires a controlled failure of at least one assumption: preferred hidden fields, relative curvature or holonomy, defects or interfaces, or portal-projected effective coefficients. We formulate a visible-relativity protection principle requiring any induced Standard-Model Lorentz violation to remain below existing bounds while allowing hidden or relative-sector calibration failure. As a worked escape example, we analyze a one-dimensional C-D interface and show that finite wall thickness acts as a momentum filter: forward conversion is controlled by the wall Fourier component at \(k_C-k_D\). The result is not evidence for a hidden D-sector spacetime, but a no-go and classification framework for when a hidden speed scale can become physical.
 
 ## 1. Introduction
 
@@ -35,11 +35,11 @@ This distinction is essential. A theory that abandons observer covariance has lo
 |---|---|---|---|
 | Theorem 1 | constant linear Lorentz-compatible map | only \(A=\kappa I\) | nonlinear, nonlocal, internal, defect |
 | Theorem 2 | smooth Lorentz-equivariant point map \(F:V\to V\) | \(F^\mu=\alpha_b(x^2)x^\mu\), null rays preserved | preferred tensors, topology, discontinuity, path dependence |
-| Theorem 3 | flat relative calibration on simply connected region | pure gauge, no holonomy | curvature, topology, defect/interface |
+| Theorem 3 | flat Abelian relative calibration on simply connected region | pure gauge, no holonomy | curvature, topology, defect/interface |
 
 ## 2. C-D Observability
 
-Let \(V\simeq\mathbb{R}^{1,3}\) be a local natural-coordinate vector space with Lorentz metric \(\eta_{\mu\nu}\). A C-sector observer uses the visible metric \(g_{\mu\nu}\), locally equivalent to \(\eta_{\mu\nu}\). A D-sector field may use its own internal calibration or effective metric. We ask when that difference becomes visible as more than a field label.
+Let \(V\simeq\mathbb{R}^{1,3}\) be a local inertial tangent space equipped with Lorentz metric \(\eta_{\mu\nu}\). We use signature \((-+++)\) and write \(x^2=\eta_{\mu\nu}x^\mu x^\nu\). A C-sector observer uses the visible metric \(g_{\mu\nu}\), locally equivalent to \(\eta_{\mu\nu}\). A D-sector field may use its own internal calibration or effective metric. We ask when that difference becomes visible as more than a field label.
 
 We define C-D observability as at least one of the following:
 
@@ -112,7 +112,7 @@ In particular, null rays are mapped into the same null rays or to zero:
 x^2=0\quad\Rightarrow\quad F(x)^2=0 .
 \]
 
-Nonlinearity alone therefore does not rescue C-D observability. The theorem does not apply to nonlocal maps, momentum-space deformations, defects, discontinuities, preferred tensors, or maps into enlarged internal spaces. Those are precisely escape classes.
+Nonlinearity alone therefore does not make \(D/C\) observable. The theorem does not apply to nonlocal maps, momentum-space deformations, defects, discontinuities, preferred tensors, or maps into enlarged internal spaces. Those are precisely escape classes.
 
 For analytic \(F\), the Taylor expansion makes the same point. Lorentz equivariance requires the first coefficients to be intertwiners:
 
@@ -125,8 +125,8 @@ F^\mu(x)=A^\mu{}_\nu x^\nu
 The symbolic check in `scripts/cd_no_go_symbolic_checks.py` finds
 
 \[
-\dim\operatorname{Hom}_{SO(1,3)}(V,V)=1,\qquad
-\dim\operatorname{Hom}_{SO(1,3)}(\mathrm{Sym}^2V,V)=0,
+\dim\operatorname{Hom}_{SO^+(1,3)}(V,V)=1,\qquad
+\dim\operatorname{Hom}_{SO^+(1,3)}(\mathrm{Sym}^2V,V)=0,
 \]
 
 and the cubic correction is proportional to \(x^2x^\mu\). Again it cannot change the null cone.
@@ -151,7 +151,7 @@ The closed-path observable is
 H[\gamma]=\exp\left(q\oint_\gamma B\right).
 \]
 
-If \(U\) is simply connected and
+For the Abelian scale connection, if \(U\) is simply connected and
 
 \[
 F=dB=0,
@@ -165,7 +165,7 @@ For a non-Abelian relative connection,
 {\cal F}=d{\cal A}+{\cal A}\wedge{\cal A}.
 \]
 
-If \({\cal A}=M^{-1}dM\) for a smooth global sector map, the Maurer-Cartan identity gives \({\cal F}=0\). A smooth pure calibration does not create relative curvature.
+On a simply connected region with a fixed global trivialization, a smooth flat connection has path-independent parallel transport and can be written as \({\cal A}=M^{-1}dM\). Conversely, for a smooth global sector map \(M\), the Maurer-Cartan identity gives \({\cal F}=0\). A smooth pure calibration therefore does not create relative curvature or a nontrivial contractible-loop holonomy.
 
 The first macroscopic C-D invariant is therefore the conjugacy class of
 
@@ -177,7 +177,7 @@ or, for small contractible loops, the relative curvature integrated over the spa
 
 ## 4. Visible Relativity Protection Principle
 
-The C-D program should not assume large visible-sector relativity violation. The empirical posture should be:
+The C-D program does not assume large visible-sector relativity violation. The empirical posture is:
 
 \[
 \begin{aligned}
@@ -190,7 +190,7 @@ The C-D program should not assume large visible-sector relativity violation. The
 \end{aligned}
 \]
 
-In practice the Standard Model should see
+In practice the Standard Model is required to see
 
 \[
 {\cal L}_{SM}={\cal L}_{SM}[g,\psi,A,\ldots]+\delta{\cal L}_{SME},
@@ -202,7 +202,7 @@ where \(\delta{\cal L}_{SME}\) remains below existing constraints. A hidden sect
 f_{\mu\nu}=\Omega^2(g_{\mu\nu}-\xi u_\mu u_\nu),
 \]
 
-but this does not automatically create a visible second cone. The background \(u^\mu\) is a controlled escape hatch, not a free lunch; it places the model near disformal, SME, and Einstein-aether boundaries [@Bekenstein1993DisformalGeometry; @Jacobson2008EinsteinAetherStatus].
+but this does not automatically create a visible second cone. The background \(u^\mu\) is a controlled escape hatch rather than an unconstrained new ingredient; it places the model near disformal, SME, and Einstein-aether boundaries [@Bekenstein1993DisformalGeometry; @Jacobson2008EinsteinAetherStatus].
 
 Relativity is therefore not treated as a binary switch. The useful question is which layer is preserved and which layer is relaxed:
 
@@ -222,15 +222,15 @@ This gives a useful constraint on any attempted small relativity-principle relax
 G_{\rm common}=O(g)\cap O(f).
 \]
 
-If the full visible Lorentz group \(O(g)\) also preserves \(f\), then \(f\) is a Lorentz-invariant symmetric bilinear form. In a local frame with \(g=\eta\), invariance under spatial rotations makes \(f=\operatorname{diag}(a,b,b,b)\), and invariance under one nonzero boost forces \(a=-b\). Therefore
+If the full visible Lorentz group \(O(g)\) also preserves \(f\), then \(f\) is a Lorentz-invariant symmetric bilinear form. In a local frame with \(g=\eta\), invariance under spatial rotations makes \(f=\operatorname{diag}(a,b,b,b)\), and invariance under one nonzero boost forces \(a=-b\). Therefore, for some nonzero scalar \(\alpha\),
 
 \[
-f_{\mu\nu}=\Omega^2 g_{\mu\nu}.
+f_{\mu\nu}=\alpha g_{\mu\nu}.
 \]
 
-A full common Lorentz principle thus permits only a conformal second metric, which has the same null cone. A genuine \(D/C\neq1\) cone can still be logically consistent, but it must be paid for by one of three moves: independent sector Lorentz groups with no local comparison, a proper-subgroup common symmetry selected by a background field, or a nonlocal/global calibration failure such as holonomy or an interface. This is the sense in which the relativity principle is constrained rather than discarded.
+A full common Lorentz principle thus permits only a conformal second metric, which has the same null cone. When the two metrics are required to have the same time and space orientation, one may write \(\alpha=\Omega^2>0\). A genuine \(D/C\neq1\) cone can still be logically consistent, but it requires one of three moves: independent sector Lorentz groups with no local comparison, a proper-subgroup common symmetry selected by a background field, or a nonlocal/global calibration failure such as holonomy or an interface. This is the sense in which the relativity principle is constrained rather than discarded.
 
-The preferred-field representative makes the point explicit. In the local rest frame of \(u^\mu\), with \(C=1\) and signature \((-+++)\),
+The preferred-field representative makes the point explicit. Let \(u^\mu\) be a \(g\)-unit timelike vector, \(g_{\mu\nu}u^\mu u^\nu=-1\), and take \(\xi>-1\) so that the displayed metric is nondegenerate with Lorentzian signature in the local rest frame. In that frame, with \(C=1\) and signature \((-+++)\),
 
 \[
 f_{\mu\nu}=\Omega^2(g_{\mu\nu}-\xi u_\mu u_\nu)
@@ -247,7 +247,7 @@ v_D=\sqrt{1+\xi}.
 
 Thus \(D/C=\sqrt{1+\xi}\) is a hidden-metric statement, not yet a visible observable. It becomes visible only through a portal or a nontrivial relative calibration; any local leakage into Standard-Model fields must then appear as constrained Lorentz-violating effective coefficients, schematically of order portal strength times \(\xi u^\mu u^\nu\).
 
-This gives a sharp constraint: exact local relativity plus smooth flat calibration makes \(D/C\) unobservable, while observable C-D physics must identify its controlled relaxation. A proposed signal that cannot name this relaxation is probably a choice of units or a renamed Lorentz-violation model.
+This gives a sharp constraint: exact local relativity plus smooth flat calibration makes \(D/C\) unobservable, while observable C-D physics must identify its controlled relaxation. A proposed signal that cannot name this relaxation is best treated as a choice of units or as an unconstrained Lorentz-violation parameterization.
 
 The practical checklist is:
 
@@ -339,7 +339,7 @@ The C-D-specific observable is the separation between conversion amplitude and h
 \Delta t=L_D\left({1\over D}-{1\over C}\right).
 \]
 
-Large \(D/C\) can change the delay or advance, while weak interface coupling suppresses the echo amplitude.
+With this sign convention, \(D>C\) gives a negative \(\Delta t\), i.e. an apparent advance relative to visible propagation over the same path length. The scale estimates below use \(|\Delta t|\). Large \(D/C\) can change the delay or advance, while weak interface coupling suppresses the echo amplitude.
 
 ### 6.1 Finite Wall Thickness
 
@@ -375,7 +375,7 @@ P_{\rm backward}\simeq
 \alpha_{\rm int}^2|{\cal F}(k_C+k_D)|^2.
 \]
 
-Thus finite wall thickness is not a cosmetic correction. It is a momentum filter. Forward conversion is coherent only when
+Finite wall thickness is therefore not merely a small correction; it acts as a momentum filter. Forward conversion is coherent only when
 
 \[
 |k_C-k_D|L_w\lesssim1,
@@ -396,9 +396,9 @@ Figure 1 shows the representative case \(D/C=2\) and \(\alpha_{\rm int}=0.1\). T
 
 The interface example is not claimed to be a new scattering formalism. Its role is to show how a C-D speed ratio becomes physical only when the smooth global calibration assumption fails.
 
-It is also not yet a causal cosmology. If \(D>C\), a hidden segment may look like an advance in visible time. A consistent model must specify a wall frame, a global time orientation, or another causal-ordering condition that prevents controllable closed causal curves. The present interface calculation only establishes flux-conserving conversion and coherence filtering in a fixed background.
+It is also not a causal cosmology. If \(D>C\), a hidden segment may look like an advance in visible time. A consistent model must specify a wall frame, a global time orientation, or another causal-ordering condition that prevents controllable closed causal curves. The interface calculation only establishes flux-conserving conversion and coherence filtering in a fixed background.
 
-The calculation is reproducible from `scripts/cd_interface_delta_scattering.py`, `scripts/cd_finite_wall_transfer_scan.py`, and `scripts/plot_interface_wall_filter.py`. The finite-wall scan writes `results/cd_finite_wall_transfer_scan.csv`; in the current run the maximum flux-conservation error is below \(5\times10^{-14}\).
+The calculation is reproducible from `scripts/cd_interface_delta_scattering.py`, `scripts/cd_finite_wall_transfer_scan.py`, and `scripts/plot_interface_wall_filter.py`. The finite-wall scan writes `results/cd_finite_wall_transfer_scan.csv`; in the recorded run the maximum flux-conservation error is below \(5\times10^{-14}\).
 
 ### 6.2 Echo Morphology as a Test Program
 
@@ -525,7 +525,7 @@ Finally, full multimetric gravity is outside this work. Generic interacting spin
 
 ## 8. Limitations and Test Program
 
-The present draft does not prove the existence of a D sector. It also does not provide a complete UV theory, a technically natural portal, or a full cosmological model. The interface calculation is a toy model. Its value is that it preserves flux, exposes the coherence condition, and gives a concrete failure mode of smooth calibration.
+This manuscript does not prove the existence of a D sector. It also does not provide a complete UV theory, a technically natural portal, or a full cosmological model. The interface calculation is a toy model. Its value is that it preserves flux, exposes the coherence condition, and gives a concrete failure mode of smooth calibration.
 
 The program would lose its independent content if every proposed C-D signal reduced to an unconstrained SME coefficient, an ordinary Weyl/nonmetricity effect, or a generic dark-sector portal with no restricted C-D morphology. Conversely, it gains content only when the same relaxation that makes \(D/C\) observable also predicts a constrained pattern, such as a low-rank coefficient texture, a holonomy class, or an interface coherence filter.
 
@@ -572,9 +572,9 @@ F^\mu(x)=\alpha_b(x^2)x^\mu,
 
 so null rays are mapped to null rays or to zero. Nonlinearity alone therefore does not make \(D/C\) visible.
 
-**Proposition A.3 (flat relative calibration).** In a simply connected region, an Abelian relative calibration connection \(B\) with \(dB=0\) is pure gauge, so every contractible closed-loop holonomy is trivial. In the non-Abelian case, a connection of the form \({\cal A}=M^{-1}dM\) has vanishing curvature by the Maurer-Cartan identity and gives no local relative-curvature observable.
+**Proposition A.3 (flat relative calibration).** In a simply connected region, an Abelian relative calibration connection \(B\) with \(dB=0\) is pure gauge, so every contractible closed-loop holonomy is trivial. In the non-Abelian case, the same conclusion holds for a smooth flat connection in a fixed global trivialization on a simply connected region; equivalently, \({\cal A}=M^{-1}dM\) for a smooth global sector map, and the Maurer-Cartan identity gives \({\cal F}=0\). Topology, curvature, singular support, and boundary jumps are therefore the routes to nontrivial relative holonomy.
 
-**Proposition A.4 (common-cone constraint).** Let \(g\) and \(f\) be two symmetric nondegenerate bilinear forms on \(V\). If the full visible Lorentz group \(O(g)\) also preserves \(f\), then \(f=\Omega^2 g\). Thus a full common Lorentz group permits only conformally related metrics and hence a shared null cone.
+**Proposition A.4 (common-cone constraint).** Let \(g\) and \(f\) be two symmetric nondegenerate bilinear forms on \(V\). If the full visible Lorentz group \(O(g)\) also preserves \(f\), then \(f=\alpha g\) for a nonzero scalar \(\alpha\). Thus a full common Lorentz group permits only conformally related bilinear forms and hence a shared null cone.
 
 These propositions are conditional. They do not apply to maps with extra internal indices, spacetime-dependent backgrounds, singular defects, nonlocal propagation, momentum-space deformations, topology, or portal-induced effective coefficients. Those are not afterthought loopholes; they are the controlled C-D observability routes.
 
@@ -586,7 +586,7 @@ Theorem 3 assumes a smooth relative connection on a simply connected region. If 
 
 ## Appendix B. Symbolic Intertwiner Check
 
-The analytic Taylor-expansion corollary in Section 3.2 is checked by `scripts/cd_no_go_symbolic_checks.py`. In the current run the script reports:
+The analytic Taylor-expansion corollary in Section 3.2 is checked by `scripts/cd_no_go_symbolic_checks.py`. In the recorded run the script reports:
 
 ```text
 linear_commutant_dim = 1
@@ -635,7 +635,7 @@ For a square wall, the transfer matrix is a single matrix exponential. For the s
 
 so the thin-wall limit can be compared directly to the \(\delta\)-interface result.
 
-The numerical output is `results/cd_finite_wall_transfer_scan.csv`. The plotted diagnostic in Figure 1 is generated by `scripts/plot_interface_wall_filter.py` from this CSV. In the current scan the maximum flux-conservation error is \(4.852\times10^{-14}\).
+The numerical output is `results/cd_finite_wall_transfer_scan.csv`. The plotted diagnostic in Figure 1 is generated by `scripts/plot_interface_wall_filter.py` from this CSV. In the recorded scan the maximum flux-conservation error is \(4.852\times10^{-14}\).
 
 The finite-wall result should be read only within its assumptions: one spatial dimension, scalar channels, a fixed wall background, no backreaction, no stochastic wall network, and no full cosmological causal model.
 
@@ -662,15 +662,15 @@ The finite-wall result should be read only within its assumptions: one spatial d
 | `scripts/audit_novelty_literature_search.py` | reproducible arXiv/OpenAlex/CrossRef/Semantic Scholar novelty-neighbor search | `results/novelty_literature_search.csv`; `results/novelty_literature_search.json`; `notes/novelty_adversarial_audit_v122.md` |
 | `scripts/build_latex_preprint.py` | generates an arXiv-style LaTeX source package from the Markdown manuscript | `submission/arxiv_cd_observability/main.tex` |
 | `scripts/audit_latex_preprint.py` | structural audit of the generated LaTeX source package | terminal `latex_preprint_audit_status=PASS` |
-| `notes/novelty_external_audit_v107.md` | novelty and literature-boundary audit | go/no-go decision |
+| `notes/novelty_external_audit_v107.md` | novelty and literature-boundary audit | novelty decision |
 | `notes/paper_self_review_v108.md` | adversarial self-review | revision risks and fixes |
-| `notes/current_research_decision_v109.md` | current research decision | minimal theorem-paper route |
+| `notes/current_research_decision_v109.md` | current research decision | theorem-paper route |
 
 ## Declarations
 
 ### Data and Code Availability
 
-The present draft uses analytic derivations and generated toy-model data. The scripts and generated artifacts are listed in Appendix D. If this work is submitted, the code and data should be deposited in a public repository with a persistent identifier.
+This manuscript uses analytic derivations and generated toy-model data. The scripts and generated artifacts are listed in Appendix D. The public artifact repository is `https://github.com/wujunlin96/cd-observability-hierarchy`; a persistent archive can be minted for a later journal version if needed.
 
 The submission bibliography should use `references/observability_used_references.bib`, which contains only the 27 references cited in the present manuscript. In the public release this bibliography is also mirrored as `paper/references.bib`.
 
@@ -682,16 +682,16 @@ This theoretical work uses no human participants, animal subjects, or private da
 
 ### Funding
 
-No external funding has been specified for the present draft.
+No external funding was received for this work.
 
 ### Conflicts of Interest
 
-No conflicts of interest have been specified for the present draft.
+The author declares no conflicts of interest.
 
 ### Author Contributions
 
-To be finalized before submission. The current working record is: the human researcher supplied the motivating C-D question and research direction; the AI assistant helped formalize assumptions, derive no-go and interface calculations, run reproducibility checks, and draft manuscript text.
+Junlin Wu supplied the motivating C-D question and research direction, reviewed the theoretical claims, and is responsible for the final interpretation and submission. AI assistance was used for mathematical organization, code generation, reproducibility checks, literature-boundary auditing, and manuscript drafting support.
 
 ### AI-Assistance Disclosure
 
-This draft was prepared with assistance from an AI coding and writing assistant. The assistant contributed to mathematical organization, literature-boundary auditing, code execution, figure generation, and prose drafting. All claims, citations, and calculations require final human verification before submission.
+The author used AI assistance for mathematical exploration, literature-search organization, manuscript drafting support, code generation, and internal consistency checks. The author is responsible for the final claims, interpretation, and submission.
