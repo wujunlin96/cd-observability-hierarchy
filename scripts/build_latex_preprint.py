@@ -418,8 +418,11 @@ def latex_document(
 
 {body}
 
+{{\small
+\setlength{{\bibsep}}{{0pt plus 0.3ex}}
 \bibliographystyle{{plainnat}}
 \bibliography{{references}}
+}}
 
 \end{{document}}
 """

@@ -774,21 +774,35 @@ Finally, full multimetric gravity is outside this work. Generic interacting spin
 \section{Limitations and Test Program}
 
 
-This manuscript does not prove the existence of a D sector. It also does not provide a complete UV theory, a technically natural portal, or a full cosmological model. The interface calculation is a toy model. Its value is that it preserves flux, exposes the coherence condition, and gives a concrete failure mode of smooth calibration.
+This manuscript is a local no-go and classification note, not a complete theory of a D sector. It does not prove the existence of a hidden spacetime, derive a UV completion, or provide a technically natural portal. The interface calculation is a one-dimensional classical scalar toy model. Its value is narrower: it preserves flux, exposes the coherence condition, and gives a concrete failure mode of smooth calibration.
 
 
 The program would lose its independent content if every proposed C-D signal reduced to an unconstrained SME coefficient, an ordinary Weyl/nonmetricity effect, or a generic dark-sector portal with no restricted C-D morphology. Conversely, it gains content only when the same relaxation that makes \(D/C\) observable also predicts a constrained pattern, such as a low-rank coefficient texture, a holonomy class, or an interface coherence filter.
 
 
-The remaining checks before journal submission are:
+The following limitations identify the precise boundary of the present argument:
 
 
-\begin{enumerate}
-\item Choose whether the observational example remains a proof-of-principle interface diagnostic or is extended to an FRB-like echo or clock-network forecast.
-\item If a forecast is added, specify the preserved/relaxed relativity layer, source population, wall-frame assumptions, and detector statistic before fitting any parameter.
-\item Complete a full claim-reference audit against the final reference list.
-\item Decide the target venue and convert the notation, bibliography style, and declarations accordingly.
-\end{enumerate}
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth}@{}}
+\toprule
+Issue & Present treatment & Open technical problem \\
+\midrule
+EFT matching & states that visible leakage must enter SME-like coefficients & choose a portal and compute Wilson coefficients in terms of \(D/C\), background fields, and coupling strengths \\
+Quantum consistency & stays at classical geometry and scalar scattering level & analyze loop corrections, radiative Lorentz breaking, technical naturalness, and possible tachyonic or ghost instabilities \\
+Four-dimensional channels & proves local vector-space no-go results and gives a one-dimensional scalar interface & include spin, polarization, angular incidence, multiparticle thresholds, and multichannel unitarity \\
+Curved spacetime & treats the no-go hierarchy in one local tangent space & formulate the construction with tetrads, curved-background relative connections, global causal ordering, and gravitational constraints \\
+Quantitative phenomenology & gives scale and morphology gates without claiming exclusions & select a data class and produce a forecast or exclusion workflow with detector statistics and nuisance models \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+
+This scope also clarifies the novelty claim. The paper is not original because it mentions multiple speeds, bimetric ideas, SME coefficients, or hidden portals. Those ingredients are already established. The proposed contribution is the ordered test: if a C-D speed ratio is claimed to be physical, one must identify which local no-go assumption fails and then supply the corresponding morphology or EFT texture.
+
+
+The cleanest next step is to choose one escape class and close this table for that case, rather than to expand all escape classes superficially. The interface/holonomy route is the closest to the present calculation because it already links a broken calibration assumption to a morphology vector. A different route, such as a low-rank SME texture, would require less new observational language but a more explicit EFT matching calculation.
 
 
 \section{Conclusion}
@@ -931,37 +945,37 @@ The finite-wall result should be read only within its assumptions: one spatial d
 \section{Artifact and Reproducibility Map}
 
 
-\begin{center}
-\small
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth}@{}}
-\toprule
-Artifact & Role & Current output \\
-\midrule
-\path{scripts/cd_no_go_symbolic_checks.py} & Lorentz-intertwiner sanity checks for the no-go hierarchy & terminal output in Appendix B \\
-\path{scripts/cd_common_cone_symbolic_check.py} & symbolic check that a symmetric bilinear form invariant under the full visible Lorentz algebra is proportional to \(\eta\) & terminal \path{lorentz_basis_proportional_to_eta=True} \\
-\path{scripts/cd_interface_delta_scattering.py} & symbolic and numeric \(\delta\)-interface amplitudes and flux check & \path{results/cd_interface_delta_scattering.csv} \\
-\path{scripts/cd_finite_wall_transfer_scan.py} & finite-wall transfer-matrix scan & \path{results/cd_finite_wall_transfer_scan.csv} \\
-\path{scripts/plot_interface_wall_filter.py} & standard-library SVG figure generation & \path{figures/interface_wall_filter.svg} \\
-\path{scripts/plot_interface_wall_filter_png.py} & PNG version of Figure 1 for LaTeX/arXiv source packages & \path{figures/interface_wall_filter.png} \\
-\path{scripts/cd_macro_scale_estimates.py} & timing, wall-crossing, and clock-holonomy scale estimates for test-program design & \path{results/cd_macro_defect_delay_scales.csv}; \path{results/cd_macro_wall_crossing_scales.csv}; \path{results/cd_macro_clock_holonomy_scales.csv} \\
-\path{scripts/cd_interface_frequency_scaling.py} & phenomenological frequency scaling of two-interface echo probabilities & \path{results/cd_interface_frequency_scaling.csv} \\
-\path{scripts/cd_interface_holonomy_forecast.py} & conservative pre-fit morphology scales for interface delay, finite-wall coherence, and relative clock holonomy & \path{results/cd_interface_holonomy_forecast.csv} \\
-\path{scripts/cd_resonant_wall_lz_scan.py} & Landau-Zener-style resonance scan for future wall-profile variants & \path{results/cd_resonant_wall_lz_scan.csv} \\
-\path{scripts/audit_observability_manuscript.py} & structural manuscript audit: citation keys, artifact paths, figure path, flux bound & terminal \path{audit_status=PASS} \\
-\path{scripts/verify_used_arxiv_refs.py} & arXiv existence check for actually cited references & terminal \path{arxiv_reference_status=PASS} \\
-\path{scripts/build_citation_context_matrix.py} & title/abstract keyword sanity check for each citation's assigned boundary role & \path{results/citation_context_matrix.csv} \\
-\path{scripts/audit_citation_sentences.py} & sentence-level audit of manuscript citation contexts against source roles and arXiv metadata & \path{results/citation_sentence_audit.csv} \\
-\path{scripts/build_used_references.py} & generates a main-draft-only BibTeX file from cited keys & \path{references/observability_used_references.bib} \\
-\path{scripts/audit_used_bibtex_metadata.py} & metadata completeness audit for the main-draft-only bibliography & \path{results/used_bibtex_metadata_audit.csv} \\
-\path{scripts/audit_novelty_literature_search.py} & reproducible arXiv/OpenAlex/CrossRef/Semantic Scholar novelty-neighbor search & \path{results/novelty_literature_search.csv}; \path{results/novelty_literature_search.json}; \path{notes/novelty_adversarial_audit_v122.md} \\
-\path{scripts/build_latex_preprint.py} & generates an arXiv-style LaTeX source package from the Markdown manuscript & \path{submission/arxiv_cd_observability/main.tex} \\
-\path{scripts/audit_latex_preprint.py} & structural audit of the generated LaTeX source package & terminal \path{latex_preprint_audit_status=PASS} \\
-\path{notes/novelty_external_audit_v107.md} & novelty and literature-boundary audit & novelty decision \\
-\path{notes/paper_self_review_v108.md} & adversarial self-review & revision risks and fixes \\
-\path{notes/current_research_decision_v109.md} & current research decision & theorem-paper route \\
-\bottomrule
-\end{tabularx}
-\end{center}
+The artifacts are grouped as calculation scripts and audit scripts. This appendix uses lists rather than a single large table so that the generated LaTeX source can page-break cleanly.
+
+
+\subsection{Calculation Artifacts}
+
+
+\begin{enumerate}
+\item \path{scripts/cd_no_go_symbolic_checks.py}: Lorentz-intertwiner sanity checks for the no-go hierarchy; terminal output is quoted in Appendix B.
+\item \path{scripts/cd_common_cone_symbolic_check.py}: symbolic check that a symmetric bilinear form invariant under the full visible Lorentz algebra is proportional to \(\eta\); terminal output includes \path{lorentz_basis_proportional_to_eta=True}.
+\item \path{scripts/cd_interface_delta_scattering.py}: symbolic and numeric \(\delta\)-interface amplitudes and flux checks; output \path{results/cd_interface_delta_scattering.csv}.
+\item \path{scripts/cd_finite_wall_transfer_scan.py}: finite-wall transfer-matrix scan; output \path{results/cd_finite_wall_transfer_scan.csv}.
+\item \path{scripts/plot_interface_wall_filter.py} and \path{scripts/plot_interface_wall_filter_png.py}: generate Figure 1 as SVG and PNG; outputs \path{figures/interface_wall_filter.svg} and \path{figures/interface_wall_filter.png}.
+\item \path{scripts/cd_macro_scale_estimates.py}: timing, wall-crossing, and clock-holonomy scale estimates; outputs \path{results/cd_macro_defect_delay_scales.csv}, \path{results/cd_macro_wall_crossing_scales.csv}, and \path{results/cd_macro_clock_holonomy_scales.csv}.
+\item \path{scripts/cd_interface_frequency_scaling.py}: phenomenological frequency scaling of two-interface echo probabilities; output \path{results/cd_interface_frequency_scaling.csv}.
+\item \path{scripts/cd_interface_holonomy_forecast.py}: conservative pre-fit morphology scales for interface delay, finite-wall coherence, and relative clock holonomy; output \path{results/cd_interface_holonomy_forecast.csv}.
+\item \path{scripts/cd_resonant_wall_lz_scan.py}: Landau-Zener-style resonance scan for future wall-profile variants; output \path{results/cd_resonant_wall_lz_scan.csv}.
+\end{enumerate}
+
+
+\subsection{Audit and Packaging Artifacts}
+
+
+\begin{enumerate}
+\item \path{scripts/audit_observability_manuscript.py}: structural manuscript audit for citation keys, artifact paths, figure paths, and finite-wall flux bounds; expected status \path{audit_status=PASS}.
+\item \path{scripts/verify_used_arxiv_refs.py}: identifier existence check for actually cited arXiv references; expected status \path{arxiv_reference_status=PASS}.
+\item \path{scripts/build_citation_context_matrix.py}: title/abstract keyword sanity check for each citation's assigned boundary role; output \path{results/citation_context_matrix.csv}.
+\item \path{scripts/audit_citation_sentences.py}: sentence-level audit of citation contexts against source roles and arXiv metadata; output \path{results/citation_sentence_audit.csv}.
+\item \path{scripts/build_used_references.py} and \path{scripts/audit_used_bibtex_metadata.py}: generate and audit the main-draft-only bibliography; outputs \path{references/observability_used_references.bib} and \path{results/used_bibtex_metadata_audit.csv}.
+\item \path{scripts/audit_novelty_literature_search.py}: reproducible arXiv/OpenAlex/CrossRef/Semantic Scholar novelty-neighbor search; outputs \path{results/novelty_literature_search.csv} and \path{results/novelty_literature_search.json}.
+\item \path{scripts/build_latex_preprint.py} and \path{scripts/audit_latex_preprint.py}: generate and audit the LaTeX source package; output \path{submission/arxiv_cd_observability/main.tex} and expected status \path{latex_preprint_audit_status=PASS}.
+\end{enumerate}
 
 
 \section*{Declarations}
@@ -970,13 +984,13 @@ Artifact & Role & Current output \\
 \subsection*{Data and Code Availability}
 
 
-This manuscript uses analytic derivations and generated toy-model data. The scripts and generated artifacts are listed in Appendix D. The public artifact repository is \path{https://github.com/wujunlin96/cd-observability-hierarchy}; a persistent archive can be minted for a later journal version if needed.
+This manuscript uses analytic derivations and generated toy-model data. The scripts and generated artifacts are listed in Appendix D. The public artifact repository is \path{https://github.com/wujunlin96/cd-observability-hierarchy}; a persistent archive can be minted for future versions if needed.
 
 
-The submission bibliography should use \path{references/observability_used_references.bib}, which contains only the 27 references cited in the present manuscript. In the public release this bibliography is also mirrored as \path{paper/references.bib}.
+The bibliography file \path{references/observability_used_references.bib} contains only the 27 references cited in the present manuscript. In the public release this bibliography is also mirrored as \path{paper/references.bib}.
 
 
-An arXiv-style source package is generated under \path{submission/arxiv_cd_observability/} in the working tree and mirrored under \path{paper/} in the public release. Local compilation is verified with the portable Tectonic binary under \path{tools/tectonic-0.16.9/}; structural package checks are performed by \path{scripts/audit_latex_preprint.py}.
+A LaTeX source package is generated under \path{submission/arxiv_cd_observability/} in the working tree and mirrored under \path{paper/} in the public release. Local compilation is verified with the portable Tectonic binary under \path{tools/tectonic-0.16.9/}; structural package checks are performed by \path{scripts/audit_latex_preprint.py}.
 
 
 \subsection*{Ethics Statement}
@@ -1009,7 +1023,10 @@ Junlin Wu supplied the motivating C-D question and research direction, reviewed 
 The author used AI assistance for mathematical exploration, literature-search organization, manuscript drafting support, code generation, and internal consistency checks. The author is responsible for the final claims, interpretation, and submission.
 
 
+{\small
+\setlength{\bibsep}{0pt plus 0.3ex}
 \bibliographystyle{plainnat}
 \bibliography{references}
+}
 
 \end{document}

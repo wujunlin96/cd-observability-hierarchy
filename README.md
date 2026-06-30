@@ -45,9 +45,11 @@ results/
 
 notes/
   current_research_decision_v109.md
+  journal_upgrade_ledger_v131.md
   novelty_adversarial_audit_v122.md
   novelty_external_audit_v107.md
   paper_self_review_v108.md
+  user_review_triage_v130.md
 
 figures/
   interface_wall_filter.png
@@ -94,7 +96,9 @@ python scripts/audit_latex_preprint.py
 
 This is a pre-arXiv public artifact bundle. The manuscript now includes formal no-go propositions, an interface/relative-holonomy morphology vector, and conservative forecast-scale tables.
 
-The technical package is ready for author-side arXiv preview. Remaining blockers are human checks: final reading of the PDF by the author, comparison with the arXiv-generated preview, and endorsement if arXiv requests it.
+The compiled PDF is 20 pages. The technical package passes the manuscript, LaTeX, citation-sentence, reference-identifier, and source-zip audits. Remaining blockers are human checks: final reading of the PDF by the author, comparison with the arXiv-generated preview, and endorsement if arXiv requests it.
+
+The manuscript is still intentionally limited. The internal notes include a journal-upgrade ledger for future work such as EFT matching, quantum consistency, four-dimensional propagation, causal structure, and a data-facing forecast. Those project-management notes are not part of the manuscript body.
 
 ## Caution
 
