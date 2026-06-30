@@ -21,7 +21,7 @@ Independent Researcher\\
 \maketitle
 
 \begin{abstract}
-Does a hidden sector with internal speed scale \(D\) leave an invariant observable imprint on a visible sector with speed scale \(C\)? We study this question as a two-sector calibration problem. The issue is not whether two numerical constants can be written down, but whether their ratio \(D/C\) has invariant observable content for a visible observer. We show that under exact local Lorentz equivariance, smooth local sector maps, and flat relative sector calibration, it does not. A constant Lorentz-compatible linear map is only a scale map. A smooth Lorentz-equivariant point map is necessarily radial on each orbit branch, \(F^\mu=\alpha_b(x^2)x^\mu\), and therefore preserves null rays. A flat Abelian relative calibration connection on a simply connected region is pure gauge, so it has no closed-path observable. Observable C-D physics therefore requires a controlled failure of at least one assumption: preferred hidden fields, relative curvature or holonomy, defects or interfaces, or portal-projected effective coefficients. We formulate a visible-relativity protection principle requiring any induced Standard-Model Lorentz violation to remain below existing bounds while allowing hidden or relative-sector calibration failure. As a worked escape example, we analyze a one-dimensional C-D interface and show that finite wall thickness acts as a momentum filter: forward conversion is controlled by the wall Fourier component at \(k_C-k_D\). The result is not evidence for a hidden D-sector spacetime, but a no-go and classification framework for when a hidden speed scale can become physical.
+Does a hidden sector with internal speed scale \(D\) leave an invariant observable imprint on a visible sector with speed scale \(C\)? We treat this as a calibration problem. Under exact local Lorentz equivariance, smooth spacetime point maps, and flat relative calibration, the ratio \(D/C\) has no local invariant visible content. A Lorentz-commuting linear map is only a scale map, a smooth Lorentz-equivariant point map preserves null rays, and a flat relative connection on a simply connected region is pure gauge. Observable C-D physics therefore requires a controlled failure mode: a preferred hidden field, relative curvature or holonomy, an interface or defect, or a portal-projected effective coefficient. We formulate a visible-relativity protection principle requiring any induced Standard-Model Lorentz violation to remain below existing bounds. As a worked escape example, a one-dimensional C-D interface shows that finite wall thickness acts as a momentum filter controlled by \(k_C-k_D\). The useful phenomenological object is not a lone delay but a constrained morphology vector linking time offset, conversion strength, coherence cutoff, and possible clock holonomy. The result is a no-go and classification framework, not evidence for a hidden D-sector spacetime.
 \end{abstract}
 
 \section{Introduction}
@@ -39,7 +39,7 @@ The main result is negative but useful: exact local relativity erases a local C-
 The work is deliberately narrower than a general Lorentz-violation or bimetric-gravity program. The idea that different sectors may carry different limiting speeds is not new; it appears in Lorentz-violating field-theory and superluminal-particle discussions \citep{Redigolo2012LorentzViolatingSUSY,ChashchinaSilagadze2012LightSpeedBarrier}. Local visible-sector Lorentz violation is already systematically parameterized and tightly constrained by the Standard-Model Extension (SME) \citep{ColladayKostelecky1998SME,KosteleckyRussell2011DataTablesSME}. Disformal metrics and preferred timelike fields have a long history \citep{Bekenstein1993DisformalGeometry,Jacobson2008EinsteinAetherStatus}. Photon velocity oscillations and active-sterile altered-dispersion models already cover important portal phenomenology \citep{Glashow1998PhotonVelocityOscillations,DeAngelisPain2002PhotonVelocityOscillations,KosteleckyMewes2004Neutrinos,PaesPakvasaWeiler2005ShortcutSterile,HollenbergPaes2009ADRResonance,Barenboim2019SterileADRRevisited}. Our goal is not to rename these fields. Our goal is to state what the C-D hypothesis adds before it enters them.
 
 
-The contribution is an observability hierarchy. First, constant local maps fail to produce a second cone. Second, smooth nonlinear point maps still fail if they remain Lorentz equivariant and lack background tensors. Third, flat relative calibration connections are pure gauge. Fourth, the remaining escape classes can be organized by which assumption they break and which known constraints they must pass.
+The contribution is an observability hierarchy. First, constant local maps fail to produce a second cone. Second, smooth nonlinear point maps still fail if they remain Lorentz equivariant and lack background tensors. Third, flat relative calibration connections are pure gauge. Fourth, the remaining escape classes can be organized by which assumption they break and which known constraints they must pass. The value added over generic bimetric, disformal, or SME parameter language is the joint morphology constraint: the same failure mode should account for a linked vector of observables, not merely for one fitted speed parameter.
 
 
 \subsection{Contribution and Scope}
@@ -72,9 +72,9 @@ This distinction is essential. A theory that abandons observer covariance has lo
 \toprule
 Result & Assumptions & Conclusion & Escape \\
 \midrule
-Theorem 1 & constant linear Lorentz-compatible map & only \(A=\kappa I\) & nonlinear, nonlocal, internal, defect \\
-Theorem 2 & smooth Lorentz-equivariant point map \(F:V\to V\) & \(F^\mu=\alpha_b(x^2)x^\mu\), null rays preserved & preferred tensors, topology, discontinuity, path dependence \\
-Theorem 3 & flat Abelian relative calibration on simply connected region & pure gauge, no holonomy & curvature, topology, defect/interface \\
+Proposition 1 & constant linear Lorentz-compatible map & only \(A=\kappa I\) & nonlinear, nonlocal, internal, defect \\
+Proposition 2 & smooth Lorentz-equivariant point map \(F:V\to V\) & radial map, null rays preserved & preferred tensors, topology, discontinuity, path dependence \\
+Observation 3 & flat Abelian relative calibration on simply connected region & pure gauge, no holonomy & curvature, topology, defect/interface \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -84,6 +84,12 @@ Theorem 3 & flat Abelian relative calibration on simply connected region & pure 
 
 
 Let \(V\simeq\mathbb{R}^{1,3}\) be a local inertial tangent space equipped with Lorentz metric \(\eta_{\mu\nu}\). We use signature \((-+++)\) and write \(x^2=\eta_{\mu\nu}x^\mu x^\nu\). A C-sector observer uses the visible metric \(g_{\mu\nu}\), locally equivalent to \(\eta_{\mu\nu}\). A D-sector field may use its own internal calibration or effective metric. We ask when that difference becomes visible as more than a field label.
+
+
+\subsection{Notation and Conventions}
+
+
+The letters \(C\) and \(D\) denote sectoral speed scales. They are not spacetime coordinates. We keep \(C\) and \(D\) explicit rather than setting the visible light speed to one. In wave calculations we use phase convention \(e^{-i\omega t}\), with right-moving spatial dependence \(e^{+ikz}\) and \(k_i=\omega/v_i\). The delta-interface coupling is denoted \(\lambda\), while a finite wall uses the integrated coupling \(\lambda_{\rm int}=\int dz\,\lambda(z)\) and \(\alpha_{\rm int}=\lambda_{\rm int}/(2\omega\sqrt{CD})\). In the delta limit, \(\lambda_{\rm int}\to\lambda\) and \(\alpha_{\rm int}\to\alpha\).
 
 
 We define C-D observability as at least one of the following:
@@ -106,7 +112,7 @@ This definition intentionally excludes weak statements such as "there exists a h
 The local no-go results use a shared set of hypotheses. The calculation is performed in one local tangent vector space \(V\), the visible and hidden calibration data are compared through the same proper orthochronous Lorentz action, and the inter-sector map acts on the ordinary vector representation without extra background tensors, defects, path dependence, or enlarged internal spaces. These hypotheses are deliberately strong. They identify when \(D/C\) is only calibration data; the escape classes in Section 5 are exactly the ways to relax them.
 
 
-\subsection{Theorem 1: Linear Scale-Map No-Go}
+\subsection{Proposition 1: Linear Scale-Map No-Go}
 
 
 Let \(A:V\to V\) be a constant real linear inter-sector map. Exact relativity of the local calibration requires
@@ -115,6 +121,9 @@ Let \(A:V\to V\) be a constant real linear inter-sector map. Exact relativity of
 \[
 A\Lambda=\Lambda A,\qquad \forall \Lambda\in SO^+(1,3).
 \]
+
+
+This is a Schur-type commutant statement for the real four-vector representation. Since the representation is real irreducible, any endomorphism commuting with the full proper Lorentz group must lie in its commutant; the elementary block calculation below shows that this commutant is just the real scalars.
 
 
 Write \(A\) in time-space block form:
@@ -148,7 +157,7 @@ x^2=0 \quad\Rightarrow\quad (Ax)^2=\kappa^2x^2=0 .
 The ratio \(D/C\), if represented only by such a constant local calibration, cannot become a visible second light cone.
 
 
-\subsection{Theorem 2: Nonlinear Point-Map No-Go}
+\subsection{Proposition 2: Nonlinear Point-Map No-Go}
 
 
 One might try to evade the previous result with a nonlinear map. Let \(F:V\to V\) be a smooth finite point map on each Lorentz orbit and assume exact Lorentz equivariance:
@@ -183,7 +192,7 @@ x^2=0\quad\Rightarrow\quad F(x)^2=0 .
 \]
 
 
-Nonlinearity alone therefore does not make \(D/C\) observable. The theorem should not be read as a theorem about deformed special relativity or relative locality, where momentum-space geometry, composition laws, or locality itself may be modified. It applies only to ordinary spacetime point maps \(F:V\to V\). Nonlocal maps, momentum-space deformations, defects, discontinuities, preferred tensors, and maps into enlarged internal spaces are outside the theorem and are precisely escape classes.
+Nonlinearity alone therefore does not make \(D/C\) observable. The proposition should not be read as a theorem about deformed special relativity or relative locality, where momentum-space geometry, composition laws, or locality itself may be modified. It applies only to ordinary spacetime point maps \(F:V\to V\). Nonlocal maps, momentum-space deformations, defects, discontinuities, preferred tensors, and maps into enlarged internal spaces are outside the proposition and are precisely escape classes.
 
 
 For analytic \(F\), the Taylor expansion makes the same point. Lorentz equivariance requires the first coefficients to be intertwiners:
@@ -196,7 +205,7 @@ F^\mu(x)=A^\mu{}_\nu x^\nu
 \]
 
 
-The symbolic check in \path{scripts/cd_no_go_symbolic_checks.py} finds
+The symbolic-intertwiner check in the public repository finds
 
 
 \[
@@ -208,7 +217,7 @@ The symbolic check in \path{scripts/cd_no_go_symbolic_checks.py} finds
 and the cubic correction is proportional to \(x^2x^\mu\). Again it cannot change the null cone.
 
 
-\subsection{Theorem 3: Flat Relative-Connection No-Go}
+\subsection{Observation 3: Flat Relative-Connection Calibration}
 
 
 The previous results concern point maps. A more global formulation treats C-D calibration as a relative connection. In the simplest Abelian clock-scale case,
@@ -505,6 +514,9 @@ With this sign convention, \(D>C\) gives a negative \(\Delta t\), i.e. an appare
 The sign of \(\Delta t\) is only a kinematic diagnostic. It is not a chronology-protection mechanism. A model with two or more separated interfaces must still specify a preferred wall foliation, a global time function for portal events, or another restriction that prevents the apparent advance from being assembled into a controllable closed causal curve.
 
 
+A minimal sufficient condition is the existence of a background time function \(T\) such that all allowed C propagation, D propagation, and interface-conversion events are future-directed with respect to \(T\). Equivalently, the wall network may define a preferred foliation and the portal matching may be restricted to equal-\(T\) slices. Then a closed controllable causal curve is excluded because every allowed segment strictly increases \(T\). This is a model assumption, not a theorem derived by the scalar interface calculation.
+
+
 \subsection{Finite Wall Thickness}
 
 
@@ -585,7 +597,7 @@ The interface example is not claimed to be a new scattering formalism. Its role 
 It is also not a causal cosmology. If \(D>C\), a hidden segment may look like an advance in visible time. A consistent model must specify a wall frame, a global time orientation, or another causal-ordering condition that prevents controllable closed causal curves. The interface calculation only establishes flux-conserving conversion and coherence filtering in a fixed background.
 
 
-The calculation is reproducible from \path{scripts/cd_interface_delta_scattering.py}, \path{scripts/cd_finite_wall_transfer_scan.py}, and \path{scripts/plot_interface_wall_filter.py}. The finite-wall scan writes \path{results/cd_finite_wall_transfer_scan.csv}; in the recorded run the maximum flux-conservation error is below \(5\times10^{-14}\).
+The public repository contains the delta-interface, finite-wall, and plotting scripts. In the recorded finite-wall scan, the maximum flux-conservation error is below \(5\times10^{-14}\).
 
 
 \subsection{Echo Morphology as a Test Program}
@@ -616,7 +628,7 @@ L_D={C|\Delta t|\over |1-C/D|}.
 \]
 
 
-For the representative hidden-metric parameterization \(D/C=\sqrt{1+\xi}\), the scale script \path{scripts/cd_macro_scale_estimates.py} gives the following order-of-magnitude targets:
+For the representative hidden-metric parameterization \(D/C=\sqrt{1+\xi}\), the repository scale table gives the following order-of-magnitude targets:
 
 
 \begin{center}
@@ -637,7 +649,7 @@ Target offset & \(\xi\) & \(D/C\) & Required hidden segment \\
 These numbers are not exclusions. They are a scale sanity check. Small cone splitting demands macroscopic hidden path length, while large cone splitting must still overcome interface phase mismatch and portal suppression.
 
 
-The frequency dependence gives an additional morphology test. The script \path{scripts/cd_interface_frequency_scaling.py} compares simple phenomenological couplings \(\alpha(\omega)=\alpha_{\rm ref}(\omega/\omega_{\rm ref})^p\). For \(p=-1\), high-frequency echoes rapidly disappear; for \(p=0\), the thin-wall echo probability is approximately achromatic before finite-wall filtering; for \(p=1\), strong reflection can appear at intermediate frequencies rather than monotonic conversion. A real forecast should therefore specify the wall profile and coupling dimension before fitting any event.
+The frequency dependence gives an additional morphology test. A companion scan compares simple phenomenological couplings \(\alpha(\omega)=\alpha_{\rm ref}(\omega/\omega_{\rm ref})^p\). For \(p=-1\), high-frequency echoes rapidly disappear; for \(p=0\), the thin-wall echo probability is approximately achromatic before finite-wall filtering; for \(p=1\), strong reflection can appear at intermediate frequencies rather than monotonic conversion. A real forecast should therefore specify the wall profile and coupling dimension before fitting any event.
 
 
 For photon-like portals, high-energy propagation constraints are a major obstacle. If the same mechanism induces an unsuppressed local photon speed shift over cosmological distances, gamma-ray burst and other distant-source timing bounds would strongly constrain it. The interface toy model avoids making that claim only because conversion is localized and filtered by \({\cal F}[\omega(1/C-1/D)]\). A photon implementation would still need an explicit time-of-flight and spectral recast before it could be treated as viable.
@@ -709,7 +721,7 @@ P_{\rm echo}(\nu)\propto
 This morphology vector is the minimal phenomenological object for the interface/holonomy route. A delayed echo alone is not enough; a C-D interpretation must also specify how the echo probability changes with observing frequency, where finite-wall coherence is lost, and whether any closed-loop clock or phase observable follows from the same relative calibration structure.
 
 
-The script \path{scripts/cd_interface_holonomy_forecast.py} generates a conservative scale table. Representative entries are:
+The public forecast table gives conservative representative scales:
 
 
 \begin{center}
@@ -792,24 +804,17 @@ The most serious missing dynamical question is radiative stability. In an ordina
 The program would lose its independent content if every proposed C-D signal reduced to an unconstrained SME coefficient, an ordinary Weyl/nonmetricity effect, or a generic dark-sector portal with no restricted C-D morphology. Conversely, it gains content only when the same relaxation that makes \(D/C\) observable also predicts a constrained pattern, such as a low-rank coefficient texture, a holonomy class, or an interface coherence filter.
 
 
-The following limitations identify the precise boundary of the present argument:
+The following limitations identify the precise boundary of the present argument.
 
 
-\begin{center}
-\small
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth}@{}}
-\toprule
-Issue & Present treatment & Open technical problem \\
-\midrule
-EFT matching & states that visible leakage must enter SME-like coefficients & choose a portal and compute Wilson coefficients in terms of \(D/C\), background fields, and coupling strengths \\
-Quantum consistency & stays at classical geometry and scalar scattering level & analyze loop corrections, radiative Lorentz breaking, technical naturalness, and possible tachyonic or ghost instabilities \\
-Causal ordering & treats apparent advances as kinematic diagnostics & specify a preferred foliation, global time function, or other condition preventing controllable closed causal curves \\
-Four-dimensional channels & proves local vector-space no-go results and gives a one-dimensional scalar interface & include spin, polarization, angular incidence, multiparticle thresholds, and multichannel unitarity \\
-Curved spacetime & treats the no-go hierarchy in one local tangent space & formulate the construction with tetrads, curved-background relative connections, global causal ordering, and gravitational constraints \\
-Quantitative phenomenology & gives scale and morphology gates without claiming exclusions & select a data class and produce a forecast or exclusion workflow with detector statistics, nuisance models, high-energy propagation bounds, and wall-scale priors \\
-\bottomrule
-\end{tabularx}
-\end{center}
+\begin{enumerate}
+\item EFT matching. The paper states that visible leakage must enter SME-like coefficients and gives only a tree-level matching sketch. A complete model must choose a portal and compute Wilson coefficients in terms of \(D/C\), background fields, and coupling strengths.
+\item Quantum consistency. The present treatment stays at classical geometry and scalar scattering level. A complete model must analyze loop corrections, radiative Lorentz breaking, technical naturalness, and possible tachyonic or ghost instabilities.
+\item Causal ordering. Apparent advances are treated only as kinematic diagnostics. A complete model must specify a preferred foliation, global time function, or other condition preventing controllable closed causal curves.
+\item Four-dimensional channels. The local no-go statements are four-vector statements, but the interface calculation is one-dimensional and scalar. A complete channel must include spin, polarization, angular incidence, multiparticle thresholds, and multichannel unitarity when relevant.
+\item Curved spacetime. The hierarchy is formulated in one local tangent space. A curved-background version must use tetrads, relative connections, global causal ordering, and gravitational constraints.
+\item Quantitative phenomenology. The scale and morphology gates are not exclusions. A data-facing version must choose a data class and produce a forecast or exclusion workflow with detector statistics, nuisance models, high-energy propagation bounds, and wall-scale priors.
+\end{enumerate}
 
 
 This scope also clarifies the novelty claim. The paper is not original because it mentions multiple speeds, bimetric ideas, SME coefficients, or hidden portals. Those ingredients are already established. The proposed contribution is the ordered test: if a C-D speed ratio is claimed to be physical, one must identify which local no-go assumption fails and then supply the corresponding morphology or EFT texture.
@@ -824,14 +829,14 @@ The cleanest next step is to choose one escape class and close this table for th
 A hidden sector assigned a speed scale \(D\) is not automatically a hidden second light cone for a visible observer. Under exact local Lorentz equivariance, smooth Lorentz-equivariant maps, and flat relative calibration, \(D/C\) has no local invariant observable content. This is not a failure of the idea; it is the organizing principle.
 
 
-The C-D hypothesis becomes physical only at controlled failure modes: preferred hidden fields, relative holonomy, defects/interfaces, or portal-projected EFT textures. Those failure modes are constrained by mature literatures, so the correct first paper is not a discovery claim. It is a no-go and observability hierarchy with a carefully bounded worked example.
+The C-D hypothesis becomes physical only at controlled failure modes: preferred hidden fields, relative holonomy, defects/interfaces, or portal-projected EFT textures. Those failure modes are constrained by mature literatures, so the correct first paper is not a discovery claim. It is a no-go and observability hierarchy with a carefully bounded worked example. Its distinctive output is the morphology vector \({\cal M}_{CD}\), which forces any future model to fit delay, conversion, coherence, and clock/holonomy information together.
 
 
 \appendix
 \section{Formal Assumptions Behind the No-Go Results}
 
 
-This appendix collects the assumptions that prevent the no-go hierarchy from being misread as a theorem about all possible hidden sectors.
+This appendix collects the assumptions that prevent the no-go hierarchy from being misread as a universal statement about all possible hidden sectors.
 
 
 \subsection{A.1 Formal Proposition Statements}
@@ -879,19 +884,19 @@ so null rays are mapped to null rays or to zero. Nonlinearity alone therefore do
 These propositions are conditional. They do not apply to maps with extra internal indices, spacetime-dependent backgrounds, singular defects, nonlocal propagation, momentum-space deformations, topology, or portal-induced effective coefficients. Those are not afterthought loopholes; they are the controlled C-D observability routes.
 
 
-Theorem 1 assumes a constant real linear map \(A:V\to V\), no extra internal indices, and exact commutation with the proper orthochronous Lorentz group. If the map acts on a larger vector space \(V\otimes W\), mixes internal sectors, depends on spacetime, or is nonlocal, the conclusion \(A=\kappa I\) need not hold.
+Proposition A.1 assumes a constant real linear map \(A:V\to V\), no extra internal indices, and exact commutation with the proper orthochronous Lorentz group. If the map acts on a larger vector space \(V\otimes W\), mixes internal sectors, depends on spacetime, or is nonlocal, the conclusion \(A=\kappa I\) need not hold.
 
 
-Theorem 2 assumes a smooth finite point map \(F:V\to V\) on each Lorentz orbit, with no background vector, tensor, spinor, defect, boundary, or path dependence. The proof uses the fixed subspace of each orbit's little group. For a timelike representative the little group is \(SO(3)\), and the fixed vector is parallel to the time direction. For a spacelike representative the little group acts nontrivially on the orthogonal \(1+2\) subspace, leaving only the representative direction fixed. For a null representative the \(E(2)\)-like little group fixes only the null line. Therefore \(F^\mu(x)=\alpha_b(x^2)x^\mu\) on each orbit branch.
+Proposition A.2 assumes a smooth finite point map \(F:V\to V\) on each Lorentz orbit, with no background vector, tensor, spinor, defect, boundary, or path dependence. The proof uses the fixed subspace of each orbit's little group. For a timelike representative the little group is \(SO(3)\), and the fixed vector is parallel to the time direction. For a spacelike representative the little group acts nontrivially on the orthogonal \(1+2\) subspace, leaving only the representative direction fixed. For a null representative the \(E(2)\)-like little group fixes only the null line. Therefore \(F^\mu(x)=\alpha_b(x^2)x^\mu\) on each orbit branch.
 
 
-Theorem 3 assumes a smooth relative connection on a simply connected region. If the region is not simply connected, a flat connection may still have global holonomy. If the connection has curvature, singular support, boundary jumps, or defect sources, the pure-gauge conclusion does not apply. These are not loopholes to hide; they are the physical escape classes listed in the main text.
+Proposition A.3 assumes a smooth relative connection on a simply connected region. If the region is not simply connected, a flat connection may still have global holonomy. If the connection has curvature, singular support, boundary jumps, or defect sources, the pure-gauge conclusion does not apply. These are not loopholes to hide; they are the physical escape classes listed in the main text.
 
 
 \section{Symbolic Intertwiner Check}
 
 
-The analytic Taylor-expansion corollary in Section 3.2 is checked by \path{scripts/cd_no_go_symbolic_checks.py}. In the recorded run the script reports:
+The analytic Taylor-expansion corollary in Section 3.2 is checked by the symbolic-intertwiner script in the public repository. In the recorded run it reports:
 
 
 \begin{verbatim}
@@ -905,7 +910,7 @@ cubic_x2x_residual_zero = True
 The first line confirms that the linear commutant is spanned by the identity. The second result confirms that no quadratic Lorentz-equivariant map \(\mathrm{Sym}^2(V)\to V\) exists in this representation check. The cubic result is the expected \(x^2x^\mu\) structure, which vanishes as a cone-changing correction on null vectors.
 
 
-This symbolic check is not a substitute for the theorem. It is a reproducibility guard against algebraic mistakes in the lowest-order expansion.
+This symbolic check is not a substitute for the proposition. It is a reproducibility guard against algebraic mistakes in the lowest-order expansion.
 
 
 \section{Interface Transfer-Matrix Calculation}
@@ -949,46 +954,61 @@ For a square wall, the transfer matrix is a single matrix exponential. For the s
 so the thin-wall limit can be compared directly to the \(\delta\)-interface result.
 
 
-The numerical output is \path{results/cd_finite_wall_transfer_scan.csv}. The plotted diagnostic in Figure 1 is generated by \path{scripts/plot_interface_wall_filter.py} from this CSV. In the recorded scan the maximum flux-conservation error is \(4.852\times10^{-14}\).
+The numerical output and plotting script are provided in the public repository. In the recorded scan the maximum flux-conservation error is \(4.852\times10^{-14}\).
 
 
 The finite-wall result should be read only within its assumptions: one spatial dimension, scalar channels, a fixed wall background, no backreaction, no stochastic wall network, and no full cosmological causal model.
 
 
-\section{Artifact and Reproducibility Map}
+\section{Minimal Tree-Level SME Matching Sketch}
 
 
-The artifacts are grouped as calculation scripts and audit scripts. This appendix uses lists rather than a single large table so that the generated LaTeX source can page-break cleanly.
+This appendix records the minimal local matching logic behind the visible-relativity protection principle. It is not a UV completion and it does not replace a full SME recast.
 
 
-\subsection{Calculation Artifacts}
+Suppose a hidden cone splitting is represented locally by a \(g\)-unit timelike vector \(u^\mu\) and a small parameter \(\xi\), so that the hidden metric differs from the visible metric through a tensor proportional to \(\xi u_\mu u_\nu\). If a local portal induces a visible fermion derivative operator
 
 
-\begin{enumerate}
-\item \path{scripts/cd_no_go_symbolic_checks.py}: Lorentz-intertwiner sanity checks for the no-go hierarchy; terminal output is quoted in Appendix B.
-\item \path{scripts/cd_common_cone_symbolic_check.py}: symbolic check that a symmetric bilinear form invariant under the full visible Lorentz algebra is proportional to \(\eta\); terminal output includes \path{lorentz_basis_proportional_to_eta=True}.
-\item \path{scripts/cd_interface_delta_scattering.py}: symbolic and numeric \(\delta\)-interface amplitudes and flux checks; output \path{results/cd_interface_delta_scattering.csv}.
-\item \path{scripts/cd_finite_wall_transfer_scan.py}: finite-wall transfer-matrix scan; output \path{results/cd_finite_wall_transfer_scan.csv}.
-\item \path{scripts/plot_interface_wall_filter.py} and \path{scripts/plot_interface_wall_filter_png.py}: generate Figure 1 as SVG and PNG; outputs \path{figures/interface_wall_filter.svg} and \path{figures/interface_wall_filter.png}.
-\item \path{scripts/cd_macro_scale_estimates.py}: timing, wall-crossing, and clock-holonomy scale estimates; outputs \path{results/cd_macro_defect_delay_scales.csv}, \path{results/cd_macro_wall_crossing_scales.csv}, and \path{results/cd_macro_clock_holonomy_scales.csv}.
-\item \path{scripts/cd_interface_frequency_scaling.py}: phenomenological frequency scaling of two-interface echo probabilities; output \path{results/cd_interface_frequency_scaling.csv}.
-\item \path{scripts/cd_interface_holonomy_forecast.py}: conservative pre-fit morphology scales for interface delay, finite-wall coherence, and relative clock holonomy; output \path{results/cd_interface_holonomy_forecast.csv}.
-\item \path{scripts/cd_resonant_wall_lz_scan.py}: Landau-Zener-style resonance scan for future wall-profile variants; output \path{results/cd_resonant_wall_lz_scan.csv}.
-\end{enumerate}
+\[
+\Delta{\cal L}_\psi=
+{i\over2}\epsilon_\psi u_\mu u_\nu
+\bar\psi\gamma^\mu\overleftrightarrow{\partial^\nu}\psi,
+\qquad
+\epsilon_\psi=\zeta_\psi\xi+O(\xi^2),
+\]
 
 
-\subsection{Audit and Packaging Artifacts}
+then comparison with the usual SME fermion kinetic structure identifies, up to trace conventions and field redefinitions,
 
 
-\begin{enumerate}
-\item \path{scripts/audit_observability_manuscript.py}: structural manuscript audit for citation keys, artifact paths, figure paths, and finite-wall flux bounds; expected status \path{audit_status=PASS}.
-\item \path{scripts/verify_used_arxiv_refs.py}: identifier existence check for actually cited arXiv references; expected status \path{arxiv_reference_status=PASS}.
-\item \path{scripts/build_citation_context_matrix.py}: title/abstract keyword sanity check for each citation's assigned boundary role; output \path{results/citation_context_matrix.csv}.
-\item \path{scripts/audit_citation_sentences.py}: sentence-level audit of citation contexts against source roles and arXiv metadata; output \path{results/citation_sentence_audit.csv}.
-\item \path{scripts/build_used_references.py} and \path{scripts/audit_used_bibtex_metadata.py}: generate and audit the main-draft-only bibliography; outputs \path{references/observability_used_references.bib} and \path{results/used_bibtex_metadata_audit.csv}.
-\item \path{scripts/audit_novelty_literature_search.py}: reproducible arXiv/OpenAlex/CrossRef/Semantic Scholar novelty-neighbor search; outputs \path{results/novelty_literature_search.csv} and \path{results/novelty_literature_search.json}.
-\item \path{scripts/build_latex_preprint.py} and \path{scripts/audit_latex_preprint.py}: generate and audit the LaTeX source package; output \path{submission/arxiv_cd_observability/main.tex} and expected status \path{latex_preprint_audit_status=PASS}.
-\end{enumerate}
+\[
+c_{\mu\nu}^{(\psi)}\sim \epsilon_\psi u_\mu u_\nu .
+\]
+
+
+A vector-current portal instead gives the schematic operator
+
+
+\[
+\Delta{\cal L}_\psi=-a_\mu^{(\psi)}\bar\psi\gamma^\mu\psi,
+\qquad
+a_\mu^{(\psi)}\sim g_\psi U_\mu ,
+\]
+
+
+which is an SME-like \(a_\mu\) term. A constant species-universal \(a_\mu\) can be unobservable after field redefinition, while species-dependent or spacetime-dependent terms are constrained.
+
+
+The loop problem is visible already at the level of dimensional analysis. For a dimensionless portal coupling \(g\) to a hidden Lorentz-breaking propagator, one generically expects
+
+
+\[
+\delta c_{\mu\nu}^{\rm loop}
+\sim {g^2\over16\pi^2}\xi u_\mu u_\nu
+\]
+
+
+unless a symmetry, sequestering mechanism, emergent low-energy structure, or fine tuning suppresses it. This estimate is the reason the visible-relativity protection principle is a quantitative naturalness requirement rather than a slogan.
 
 
 \section*{Declarations}
@@ -997,13 +1017,13 @@ The artifacts are grouped as calculation scripts and audit scripts. This appendi
 \subsection*{Data and Code Availability}
 
 
-This manuscript uses analytic derivations and generated toy-model data. The scripts and generated artifacts are listed in Appendix D. The public artifact repository is \path{https://github.com/wujunlin96/cd-observability-hierarchy}; a persistent archive can be minted for future versions if needed.
+This manuscript uses analytic derivations and generated toy-model data. The public artifact repository is \path{https://github.com/wujunlin96/cd-observability-hierarchy}; a persistent archive can be minted for future versions if needed. The repository README and manifest list the scripts, tables, figure source, and package-audit commands used for this version.
 
 
-The bibliography file \path{references/observability_used_references.bib} contains only the 27 references cited in the present manuscript. In the public release this bibliography is also mirrored as \path{paper/references.bib}.
+The release bibliography contains only the 27 references cited in the present manuscript.
 
 
-A LaTeX source package is generated under \path{submission/arxiv_cd_observability/} in the working tree and mirrored under \path{paper/} in the public release. Local compilation is verified with the portable Tectonic binary under \path{tools/tectonic-0.16.9/}; structural package checks are performed by \path{scripts/audit_latex_preprint.py}.
+The public release includes the LaTeX source package, bibliography, compiled PDF, generated figure, reproducibility scripts, and audit outputs used for this version.
 
 
 \subsection*{Ethics Statement}
@@ -1036,9 +1056,9 @@ Junlin Wu supplied the motivating C-D question and research direction, reviewed 
 The author used AI assistance for mathematical exploration, literature-search organization, manuscript drafting support, code generation, and internal consistency checks. The author is responsible for the final claims, interpretation, and submission.
 
 
-{\small
+{\scriptsize
 \setlength{\bibsep}{0pt plus 0.3ex}
-\bibliographystyle{plainnat}
+\bibliographystyle{abbrvnat}
 \bibliography{references}
 }
 

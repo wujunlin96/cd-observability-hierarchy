@@ -418,9 +418,9 @@ def latex_document(
 
 {body}
 
-{{\small
+{{\scriptsize
 \setlength{{\bibsep}}{{0pt plus 0.3ex}}
-\bibliographystyle{{plainnat}}
+\bibliographystyle{{abbrvnat}}
 \bibliography{{references}}
 }}
 

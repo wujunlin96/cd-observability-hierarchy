@@ -31,6 +31,8 @@ The journal version should not be submitted as a full theory paper until at leas
 5. Data-facing phenomenology. Produce one forecast or exclusion workflow with detector statistics, nuisance parameters, high-energy propagation constraints where relevant, and a parameter scan, rather than a single illustrative parameter point.
 6. Literature boundary. Update the comparison against SME, VSL, bimetric gravity, hidden photon, shortcut sterile neutrino, Weyl/nonmetricity, and clock-network/topological-defect searches using the final chosen channel.
 7. Wall microphysics. Derive the interface thickness \(L_w\) from a field mass, defect tension, plasma/material response scale, or cosmological defect-network model instead of treating it only as a free phenomenological width.
+8. Complete SME dictionary. Replace the tree-level matching sketch in Appendix D with a portal-specific calculation, including operator basis, field-redefinition ambiguities, minimal/nonminimal SME classification, and experimental coefficient bounds.
+9. Chronology proof. Promote the sufficient global-time condition used in the interface toy model into a theorem for a specified wall-network geometry, or restrict the model class explicitly enough that controllable CTCs are impossible by construction.
 
 ## Priority recommendation
 
@@ -43,3 +45,4 @@ The highest-value path is not to expand every escape class. Pick one route and f
 The photon portal remains a constraint channel rather than a discovery-first route unless a genuinely distinctive low-rank or coherence-filter signature survives existing bounds.
 
 The second external-AI review is recorded in `notes/external_ai_review_triage_v132.md`.
+The third external-AI review is recorded in `notes/external_ai_review_triage_v133.md`.
