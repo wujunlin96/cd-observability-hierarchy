@@ -4,13 +4,13 @@ Draft date: 2026-07-01
 
 ## Abstract
 
-We study a two-sector thought experiment in which a hidden sector is assigned an internal speed scale \(D\) while the visible sector uses speed scale \(C\). The central question is not whether two numerical constants can be written down, but whether their ratio \(D/C\) has invariant observable content for a visible observer. We show that under exact local Lorentz equivariance, smooth local sector maps, and flat relative sector calibration, it does not. A constant Lorentz-compatible linear map is only a scale map. A smooth Lorentz-equivariant point map is necessarily radial on each orbit branch, \(F^\mu=\alpha_b(x^2)x^\mu\), and therefore preserves null rays. A flat Abelian relative calibration connection on a simply connected region is pure gauge, so it has no closed-path observable. Observable C-D physics therefore requires a controlled failure of at least one assumption: preferred hidden fields, relative curvature or holonomy, defects or interfaces, or portal-projected effective coefficients. We formulate a visible-relativity protection principle requiring any induced Standard-Model Lorentz violation to remain below existing bounds while allowing hidden or relative-sector calibration failure. As a worked escape example, we analyze a one-dimensional C-D interface and show that finite wall thickness acts as a momentum filter: forward conversion is controlled by the wall Fourier component at \(k_C-k_D\). The result is not evidence for a hidden D-sector spacetime, but a no-go and classification framework for when a hidden speed scale can become physical.
+Does a hidden sector with internal speed scale \(D\) leave an invariant observable imprint on a visible sector with speed scale \(C\)? We study this question as a two-sector calibration problem. The issue is not whether two numerical constants can be written down, but whether their ratio \(D/C\) has invariant observable content for a visible observer. We show that under exact local Lorentz equivariance, smooth local sector maps, and flat relative sector calibration, it does not. A constant Lorentz-compatible linear map is only a scale map. A smooth Lorentz-equivariant point map is necessarily radial on each orbit branch, \(F^\mu=\alpha_b(x^2)x^\mu\), and therefore preserves null rays. A flat Abelian relative calibration connection on a simply connected region is pure gauge, so it has no closed-path observable. Observable C-D physics therefore requires a controlled failure of at least one assumption: preferred hidden fields, relative curvature or holonomy, defects or interfaces, or portal-projected effective coefficients. We formulate a visible-relativity protection principle requiring any induced Standard-Model Lorentz violation to remain below existing bounds while allowing hidden or relative-sector calibration failure. As a worked escape example, we analyze a one-dimensional C-D interface and show that finite wall thickness acts as a momentum filter: forward conversion is controlled by the wall Fourier component at \(k_C-k_D\). The result is not evidence for a hidden D-sector spacetime, but a no-go and classification framework for when a hidden speed scale can become physical.
 
 ## 1. Introduction
 
 The phrase "a second light speed" is ambiguous. If two decoupled sectors each define their own clocks and rods, a numerical difference between their internal light speeds can be removed by calibration. If the sectors interact, however, a visible observer may ask whether hidden null propagation can appear as a distinct causal cone, a delayed or advanced echo, a closed-loop phase, or a portal-induced effective-field-theory coefficient.
 
-This paper formulates that question as an observability problem. We call the visible sector \(C\) and the hidden sector \(D\). The symbols \(C\) and \(D\) do not by themselves denote two visible signal speeds. They denote sectoral calibration data whose physical status depends on the inter-sector map, the existence of portals, and the global structure of the relative calibration.
+This paper formulates that question as an observability problem. We call the visible-sector speed scale \(C\) and the hidden-sector speed scale \(D\). The symbols \(C\) and \(D\) are not coordinates or manifold labels, and they do not by themselves denote two visible signal speeds. They denote sectoral calibration data whose physical status depends on the inter-sector map, the existence of portals, and the global structure of the relative calibration.
 
 The main result is negative but useful: exact local relativity erases a local C-D speed ratio. A hidden speed constant becomes visible only when at least one of the assumptions behind this erasure fails. This viewpoint protects the construction from a common mistake: promoting a coordinate or unit convention into new physics.
 
@@ -112,7 +112,7 @@ In particular, null rays are mapped into the same null rays or to zero:
 x^2=0\quad\Rightarrow\quad F(x)^2=0 .
 \]
 
-Nonlinearity alone therefore does not make \(D/C\) observable. The theorem does not apply to nonlocal maps, momentum-space deformations, defects, discontinuities, preferred tensors, or maps into enlarged internal spaces. Those are precisely escape classes.
+Nonlinearity alone therefore does not make \(D/C\) observable. The theorem should not be read as a theorem about deformed special relativity or relative locality, where momentum-space geometry, composition laws, or locality itself may be modified. It applies only to ordinary spacetime point maps \(F:V\to V\). Nonlocal maps, momentum-space deformations, defects, discontinuities, preferred tensors, and maps into enlarged internal spaces are outside the theorem and are precisely escape classes.
 
 For analytic \(F\), the Taylor expansion makes the same point. Lorentz equivariance requires the first coefficients to be intertwiners:
 
@@ -247,6 +247,8 @@ v_D=\sqrt{1+\xi}.
 
 Thus \(D/C=\sqrt{1+\xi}\) is a hidden-metric statement, not yet a visible observable. It becomes visible only through a portal or a nontrivial relative calibration; any local leakage into Standard-Model fields must then appear as constrained Lorentz-violating effective coefficients, schematically of order portal strength times \(\xi u^\mu u^\nu\).
 
+This statement is a matching requirement, not a completed SME dictionary. A local portal would have to identify which visible operator is induced, whether it belongs to the minimal or nonminimal SME, and how its coefficient scales with \(D/C\), the portal coupling, and any background tensors. An interface or defect may instead behave as a boundary or nonlocal effective operator before any bulk SME limit is justified.
+
 This gives a sharp constraint: exact local relativity plus smooth flat calibration makes \(D/C\) unobservable, while observable C-D physics must identify its controlled relaxation. A proposed signal that cannot name this relaxation is best treated as a choice of units or as an unconstrained Lorentz-violation parameterization.
 
 The practical checklist is:
@@ -341,6 +343,8 @@ The C-D-specific observable is the separation between conversion amplitude and h
 
 With this sign convention, \(D>C\) gives a negative \(\Delta t\), i.e. an apparent advance relative to visible propagation over the same path length. The scale estimates below use \(|\Delta t|\). Large \(D/C\) can change the delay or advance, while weak interface coupling suppresses the echo amplitude.
 
+The sign of \(\Delta t\) is only a kinematic diagnostic. It is not a chronology-protection mechanism. A model with two or more separated interfaces must still specify a preferred wall foliation, a global time function for portal events, or another restriction that prevents the apparent advance from being assembled into a controllable closed causal curve.
+
 ### 6.1 Finite Wall Thickness
 
 For a finite wall with profile \(\lambda(z)\), weak-coupling conversion is controlled by the Fourier transform of the wall:
@@ -388,9 +392,9 @@ L_w\lesssim
 {C\over \omega |1-C/D|}.
 \]
 
-This produces a real tension: large \(D/C\) helps create a distinctive time shift, but also increases phase mismatch and suppresses conversion through a thick wall.
+This produces a real tension: large \(D/C\) helps create a distinctive time shift, but also increases phase mismatch and suppresses conversion through a thick wall. In a microscopic model, \(L_w\) cannot remain an arbitrary fitting length. It should be set by a wall field mass, defect tension, plasma or material response scale, or another dynamical mechanism that also controls the available energy range.
 
-![Finite C-D interface wall filter](../figures/interface_wall_filter.svg)
+![Finite C-D interface momentum filter: wall thickness suppresses conversion once the phase mismatch \( |k_C-k_D|L_w \) exceeds unity](../figures/interface_wall_filter.svg)
 
 Figure 1 shows the representative case \(D/C=2\) and \(\alpha_{\rm int}=0.1\). This is a proof-of-principle diagnostic, not an exclusion plot. The transfer-matrix result tracks the Born Fourier-filter prediction in the weak-coupling regime. A smooth wall suppresses conversion more rapidly than a square wall, making the wall profile an observable part of the escape route rather than an arbitrary modeling detail.
 
@@ -428,6 +432,8 @@ For the representative hidden-metric parameterization \(D/C=\sqrt{1+\xi}\), the 
 These numbers are not exclusions. They are a scale sanity check. Small cone splitting demands macroscopic hidden path length, while large cone splitting must still overcome interface phase mismatch and portal suppression.
 
 The frequency dependence gives an additional morphology test. The script `scripts/cd_interface_frequency_scaling.py` compares simple phenomenological couplings \(\alpha(\omega)=\alpha_{\rm ref}(\omega/\omega_{\rm ref})^p\). For \(p=-1\), high-frequency echoes rapidly disappear; for \(p=0\), the thin-wall echo probability is approximately achromatic before finite-wall filtering; for \(p=1\), strong reflection can appear at intermediate frequencies rather than monotonic conversion. A real forecast should therefore specify the wall profile and coupling dimension before fitting any event.
+
+For photon-like portals, high-energy propagation constraints are a major obstacle. If the same mechanism induces an unsuppressed local photon speed shift over cosmological distances, gamma-ray burst and other distant-source timing bounds would strongly constrain it. The interface toy model avoids making that claim only because conversion is localized and filtered by \({\cal F}[\omega(1/C-1/D)]\). A photon implementation would still need an explicit time-of-flight and spectral recast before it could be treated as viable.
 
 This is a falsifiability gate for the interface route: an alleged C-D echo should not be judged only by the existence of a delayed copy. It should show the linked time-offset, conversion-strength, and coherence-filter pattern implied by the same controlled failure of smooth calibration.
 
@@ -511,7 +517,7 @@ Multi-speed sector models already exist. For example, Lorentz-violating supersym
 
 Varying-speed-of-light cosmologies change the status of the visible light speed or introduce bimetric/cosmological mechanisms to address early-universe puzzles [@AlbrechtMagueijo1999VSL; @Magueijo2003VSLReview; @Moffat2002VSLTheories; @Magueijo2008BimetricVSL]. The C-D question treated here is different. We do not assume that the visible-sector speed \(C\) varies in spacetime, nor do we use a varying visible \(c\) to solve horizon or flatness problems. We instead ask whether a hidden-sector speed ratio \(D/C\) has invariant observable content under exact local relativity and controlled inter-sector calibration.
 
-Local visible-sector Lorentz breaking belongs to the SME program [@ColladayKostelecky1998SME; @KosteleckyRussell2011DataTablesSME]. The C-D hierarchy does not replace the SME. It says that any visible local breaking generated by a C-D portal must land in an SME-like coefficient or justify why it does not.
+Local visible-sector Lorentz breaking belongs to the SME program [@ColladayKostelecky1998SME; @KosteleckyRussell2011DataTablesSME]. The C-D hierarchy does not replace the SME. It says that any visible local breaking generated by a C-D portal must land in an SME-like coefficient or justify why it does not. The present paper gives this as a consistency requirement, not as a numerical coefficient map.
 
 Disformal hidden metrics and preferred vectors sit near Bekenstein-type physical/gravitational metric relations and Einstein-aether models [@Bekenstein1993DisformalGeometry; @Jacobson2008EinsteinAetherStatus]. In this paper they are escape classes, not novelty claims.
 
@@ -527,6 +533,8 @@ Finally, full multimetric gravity is outside this work. Generic interacting spin
 
 This manuscript is a local no-go and classification note, not a complete theory of a D sector. It does not prove the existence of a hidden spacetime, derive a UV completion, or provide a technically natural portal. The interface calculation is a one-dimensional classical scalar toy model. Its value is narrower: it preserves flux, exposes the coherence condition, and gives a concrete failure mode of smooth calibration.
 
+The most serious missing dynamical question is radiative stability. In an ordinary local quantum field theory, a portal connecting visible fields to a hidden Lorentz-breaking cone can radiatively feed Lorentz-violating operators back into the visible sector. A realistic model must therefore invoke a symmetry, sequestering mechanism, emergent low-energy protection, or fine tuning, and then compute the induced coefficients rather than merely assuming visible relativity is protected.
+
 The program would lose its independent content if every proposed C-D signal reduced to an unconstrained SME coefficient, an ordinary Weyl/nonmetricity effect, or a generic dark-sector portal with no restricted C-D morphology. Conversely, it gains content only when the same relaxation that makes \(D/C\) observable also predicts a constrained pattern, such as a low-rank coefficient texture, a holonomy class, or an interface coherence filter.
 
 The following limitations identify the precise boundary of the present argument:
@@ -535,9 +543,10 @@ The following limitations identify the precise boundary of the present argument:
 |---|---|---|
 | EFT matching | states that visible leakage must enter SME-like coefficients | choose a portal and compute Wilson coefficients in terms of \(D/C\), background fields, and coupling strengths |
 | Quantum consistency | stays at classical geometry and scalar scattering level | analyze loop corrections, radiative Lorentz breaking, technical naturalness, and possible tachyonic or ghost instabilities |
+| Causal ordering | treats apparent advances as kinematic diagnostics | specify a preferred foliation, global time function, or other condition preventing controllable closed causal curves |
 | Four-dimensional channels | proves local vector-space no-go results and gives a one-dimensional scalar interface | include spin, polarization, angular incidence, multiparticle thresholds, and multichannel unitarity |
 | Curved spacetime | treats the no-go hierarchy in one local tangent space | formulate the construction with tetrads, curved-background relative connections, global causal ordering, and gravitational constraints |
-| Quantitative phenomenology | gives scale and morphology gates without claiming exclusions | select a data class and produce a forecast or exclusion workflow with detector statistics and nuisance models |
+| Quantitative phenomenology | gives scale and morphology gates without claiming exclusions | select a data class and produce a forecast or exclusion workflow with detector statistics, nuisance models, high-energy propagation bounds, and wall-scale priors |
 
 This scope also clarifies the novelty claim. The paper is not original because it mentions multiple speeds, bimetric ideas, SME coefficients, or hidden portals. Those ingredients are already established. The proposed contribution is the ordered test: if a C-D speed ratio is claimed to be physical, one must identify which local no-go assumption fails and then supply the corresponding morphology or EFT texture.
 

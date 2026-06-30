@@ -25,11 +25,12 @@ The present version is allowed to remain an arXiv preprint only if it satisfies 
 The journal version should not be submitted as a full theory paper until at least one path in each of the following categories has been completed.
 
 1. EFT matching. Choose a concrete portal and compute visible-sector Wilson coefficients or an SME-like coefficient texture as a function of \(D/C\), the portal coupling, and the relevant background fields.
-2. Quantum consistency. Check loop-induced visible Lorentz violation, technical naturalness of large or hierarchical \(D/C\), and possible ghost or tachyonic instabilities in the chosen model.
+2. Quantum consistency. Check loop-induced visible Lorentz violation, technical naturalness of large or hierarchical \(D/C\), and possible ghost or tachyonic instabilities in the chosen model. The calculation should state whether the visible sector is symmetry-protected, sequestered, emergent, or fine-tuned.
 3. Four-dimensional propagation. Extend the one-dimensional scalar wall calculation to at least one physically interpretable four-dimensional channel, including angular incidence, polarization or spin where relevant, and unitarity checks.
-4. Causal structure. State the wall frame, global time orientation, or relative-connection condition that prevents controllable closed causal curves when \(D>C\).
-5. Data-facing phenomenology. Produce one forecast or exclusion workflow with detector statistics, nuisance parameters, and a parameter scan, rather than a single illustrative parameter point.
+4. Causal structure. State the wall frame, global time orientation, or relative-connection condition that prevents controllable closed causal curves when \(D>C\), especially in multi-interface configurations.
+5. Data-facing phenomenology. Produce one forecast or exclusion workflow with detector statistics, nuisance parameters, high-energy propagation constraints where relevant, and a parameter scan, rather than a single illustrative parameter point.
 6. Literature boundary. Update the comparison against SME, VSL, bimetric gravity, hidden photon, shortcut sterile neutrino, Weyl/nonmetricity, and clock-network/topological-defect searches using the final chosen channel.
+7. Wall microphysics. Derive the interface thickness \(L_w\) from a field mass, defect tension, plasma/material response scale, or cosmological defect-network model instead of treating it only as a free phenomenological width.
 
 ## Priority recommendation
 
@@ -40,3 +41,5 @@ The highest-value path is not to expand every escape class. Pick one route and f
 3. Clock-network relative holonomy, because it has a clear distinction from ordinary single-sector transients if the relative-sector morphology is made precise.
 
 The photon portal remains a constraint channel rather than a discovery-first route unless a genuinely distinctive low-rank or coherence-filter signature survives existing bounds.
+
+The second external-AI review is recorded in `notes/external_ai_review_triage_v132.md`.

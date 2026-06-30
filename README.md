@@ -45,6 +45,7 @@ results/
 
 notes/
   current_research_decision_v109.md
+  external_ai_review_triage_v132.md
   journal_upgrade_ledger_v131.md
   novelty_adversarial_audit_v122.md
   novelty_external_audit_v107.md
