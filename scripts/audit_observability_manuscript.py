@@ -15,7 +15,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DRAFT = ROOT / "draft" / "main_observability_hierarchy.md"
-BIB = ROOT / "references" / "references.bib"
+BIB = next(
+    (
+        path
+        for path in [
+            ROOT / "references" / "references.bib",
+            ROOT / "paper" / "references.bib",
+            ROOT / "references" / "observability_used_references.bib",
+        ]
+        if path.exists()
+    ),
+    ROOT / "references" / "references.bib",
+)
 FINITE_WALL_CSV = ROOT / "results" / "cd_finite_wall_transfer_scan.csv"
 
 
@@ -36,9 +47,23 @@ def markdown_figures(text: str) -> list[str]:
 
 
 def literal_paths(text: str) -> set[str]:
-    roots = "scripts|results|figures|notes|references|draft|submission"
+    roots = "scripts|results|figures|notes|references|draft|submission|paper"
     candidates = set(re.findall(rf"`((?:{roots})/[^`]+)`", text))
     candidates |= set(re.findall(rf"`((?:{roots})\\[^`]+)`", text))
+    return candidates
+
+
+def artifact_candidates(literal: str) -> list[Path]:
+    normalized = literal.replace("\\", "/")
+    candidates = [(ROOT / normalized).resolve()]
+    package_prefix = "submission/arxiv_cd_observability/"
+    if normalized.startswith(package_prefix):
+        candidates.append((ROOT / "paper" / normalized[len(package_prefix) :]).resolve())
+    public_package_prefix = "paper/"
+    if normalized.startswith(public_package_prefix):
+        candidates.append(
+            (ROOT / "submission" / "arxiv_cd_observability" / normalized[len(public_package_prefix) :]).resolve()
+        )
     return candidates
 
 
@@ -63,9 +88,12 @@ def main() -> int:
             errors.append(f"missing figure link target: {fig} -> {fig_path}")
 
     for literal in sorted(literal_paths(draft)):
-        path = (ROOT / literal.replace("\\", "/")).resolve()
-        if not path.exists():
-            errors.append(f"missing literal artifact path: {literal}")
+        candidates = artifact_candidates(literal)
+        if not any(path.exists() for path in candidates):
+            errors.append(
+                "missing literal artifact path: "
+                f"{literal} -> {', '.join(str(path) for path in candidates)}"
+            )
 
     if FINITE_WALL_CSV.exists():
         mx = max_flux_error(FINITE_WALL_CSV)

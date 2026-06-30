@@ -10,7 +10,17 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PKG = ROOT / "submission" / "arxiv_cd_observability"
+PKG = next(
+    (
+        path
+        for path in [
+            ROOT / "submission" / "arxiv_cd_observability",
+            ROOT / "paper",
+        ]
+        if path.exists()
+    ),
+    ROOT / "submission" / "arxiv_cd_observability",
+)
 MAIN = PKG / "main.tex"
 BIB = PKG / "references.bib"
 PORTABLE_TECTONIC = ROOT / "tools" / "tectonic-0.16.9" / "tectonic.exe"

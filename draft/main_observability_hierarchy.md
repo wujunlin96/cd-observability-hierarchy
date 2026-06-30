@@ -451,6 +451,36 @@ and, for a clock of frequency \(\nu\),
 
 The first equation fixes the hidden path length needed for a visible time offset. The second gives the frequency above which a wall of thickness \(L_w\) suppresses conversion by phase mismatch. The third turns a relative calibration holonomy into a clock phase step. These three relations are independent enough to be useful: a model can fit one by hand, but it is harder to fit all three without specifying the same wall, cone split, and relative connection.
 
+It is useful to package the prediction as a morphology vector rather than as a single anomaly:
+
+\[
+{\cal M}_{CD}=
+\left(
+\Delta t,\,
+P_{\rm echo}(\nu),\,
+f_{\rm coh},\,
+\Delta\phi_{\rm clock}
+\right),
+\]
+
+with leading dependencies
+
+\[
+\Delta t\propto L_D |1-C/D|,
+\qquad
+f_{\rm coh}\propto {1\over L_w |1-C/D|},
+\]
+
+\[
+P_{\rm echo}(\nu)\propto
+\alpha(\nu)^4
+\left|{\cal F}\!\left[2\pi\nu(1/C-1/D)\right]\right|^4,
+\qquad
+\Delta\phi_{\rm clock}\propto\nu\oint_\gamma B .
+\]
+
+This morphology vector is the minimal phenomenological object for the interface/holonomy route. A delayed echo alone is not enough; a C-D interpretation must also specify how the echo probability changes with observing frequency, where finite-wall coherence is lost, and whether any closed-loop clock or phase observable follows from the same relative calibration structure.
+
 The script `scripts/cd_interface_holonomy_forecast.py` generates a conservative scale table. Representative entries are:
 
 | Route | Input | Derived scale | Meaning |
@@ -463,6 +493,17 @@ The script `scripts/cd_interface_holonomy_forecast.py` generates a conservative 
 | holonomy | \(4\times10^{14}\,{\rm Hz}\) clock, \(0.01\) rad, \(1\,{\rm s}\) event | \(\delta\tau\simeq4.0\times10^{-18}\,{\rm s}\), \(y\sim4.0\times10^{-18}\) | optical clocks convert tiny time steps into measurable phase targets |
 
 The table is not a proposal to search exactly these numbers. It states consistency requirements. A C-D interface interpretation should name the wall thickness, the cone split, and the coupling frequency dependence; a C-D holonomy interpretation should name the loop, the relative connection, and the clock response. Otherwise the signal is not yet distinguishable from a generic transient, ordinary propagation delay, or unconstrained clock perturbation.
+
+This gives immediate null tests:
+
+| Candidate observation | Why it is not yet C-D evidence |
+|---|---|
+| A delayed copy with no frequency-dependent conversion law | Could be ordinary propagation, scattering, lensing, or source repetition |
+| A frequency cutoff with no tied time offset | Could be an ordinary material/plasma/filtering effect |
+| A clock-network transient with no closed-loop or defect geometry | Could be a generic correlated clock perturbation |
+| A fitted speed ratio with no named failure of the no-go assumptions | Likely a calibration convention or an unconstrained Lorentz-violation parameter |
+
+The positive target is therefore not "any anomalous delay." It is a co-constrained pattern: the same \(D/C\), wall scale \(L_w\), interface coupling \(\alpha(\nu)\), and relative connection must explain the delay, conversion strength, coherence cutoff, and possible clock phase response.
 
 ## 7. Relation to Existing Programs
 
@@ -621,7 +662,6 @@ The finite-wall result should be read only within its assumptions: one spatial d
 | `scripts/audit_novelty_literature_search.py` | reproducible arXiv/OpenAlex/CrossRef/Semantic Scholar novelty-neighbor search | `results/novelty_literature_search.csv`; `results/novelty_literature_search.json`; `notes/novelty_adversarial_audit_v122.md` |
 | `scripts/build_latex_preprint.py` | generates an arXiv-style LaTeX source package from the Markdown manuscript | `submission/arxiv_cd_observability/main.tex` |
 | `scripts/audit_latex_preprint.py` | structural audit of the generated LaTeX source package | terminal `latex_preprint_audit_status=PASS` |
-| `scripts/audit_submission_readiness.py` | final pre-submission gate separating technical package health from human author/license decisions | terminal `submission_readiness_status=BLOCKED_HUMAN_DECISIONS` until author metadata is finalized |
 | `notes/novelty_external_audit_v107.md` | novelty and literature-boundary audit | go/no-go decision |
 | `notes/paper_self_review_v108.md` | adversarial self-review | revision risks and fixes |
 | `notes/current_research_decision_v109.md` | current research decision | minimal theorem-paper route |
@@ -632,9 +672,9 @@ The finite-wall result should be read only within its assumptions: one spatial d
 
 The present draft uses analytic derivations and generated toy-model data. The scripts and generated artifacts are listed in Appendix D. If this work is submitted, the code and data should be deposited in a public repository with a persistent identifier.
 
-The submission bibliography should use `references/observability_used_references.bib`, which contains only the 27 references cited in the present manuscript. The larger `references/references.bib` file contains historical entries from earlier research branches.
+The submission bibliography should use `references/observability_used_references.bib`, which contains only the 27 references cited in the present manuscript. In the public release this bibliography is also mirrored as `paper/references.bib`.
 
-An arXiv-style source package is generated under `submission/arxiv_cd_observability/`. Local compilation is verified with the portable Tectonic binary under `tools/tectonic-0.16.9/`; structural package checks are performed by `scripts/audit_latex_preprint.py`.
+An arXiv-style source package is generated under `submission/arxiv_cd_observability/` in the working tree and mirrored under `paper/` in the public release. Local compilation is verified with the portable Tectonic binary under `tools/tectonic-0.16.9/`; structural package checks are performed by `scripts/audit_latex_preprint.py`.
 
 ### Ethics Statement
 

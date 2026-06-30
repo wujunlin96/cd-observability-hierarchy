@@ -18,7 +18,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DRAFT = ROOT / "draft" / "main_observability_hierarchy.md"
-BIB = ROOT / "references" / "references.bib"
+BIB = next(
+    (
+        path
+        for path in [
+            ROOT / "references" / "observability_used_references.bib",
+            ROOT / "paper" / "references.bib",
+            ROOT / "references" / "references.bib",
+        ]
+        if path.exists()
+    ),
+    ROOT / "references" / "observability_used_references.bib",
+)
 USER_AGENT = "cd-observability-reference-audit/1.0 (local manuscript check)"
 
 

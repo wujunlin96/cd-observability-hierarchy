@@ -19,6 +19,8 @@ paper/
   main.tex                             # Generated LaTeX source
   main.bbl                             # Bibliography generated for arXiv-style source
   references.bib                       # Bibliography used by main.tex
+  README.md
+  MANIFEST.txt
   arxiv_cd_observability_source.zip    # Clean arXiv-style source package
   figures/
     interface_wall_filter.png
@@ -36,6 +38,12 @@ scripts/
 results/
   cd_*                                # Generated reproducibility tables
   citation_*                          # Citation audit outputs
+
+notes/
+  current_research_decision_v109.md
+  novelty_adversarial_audit_v122.md
+  novelty_external_audit_v107.md
+  paper_self_review_v108.md
 
 figures/
   interface_wall_filter.png
@@ -80,11 +88,9 @@ python scripts/audit_latex_preprint.py
 
 ## Current Status
 
-This is a pre-arXiv public artifact bundle. The manuscript is being strengthened before arXiv upload by adding:
+This is a pre-arXiv public artifact bundle. The manuscript now includes formal no-go propositions, an interface/relative-holonomy morphology vector, and conservative forecast-scale tables.
 
-- clearer theorem/proposition statements;
-- interface and relative-holonomy morphology;
-- conservative scale forecasts rather than exclusion claims.
+Remaining arXiv blockers are human submission decisions: final author metadata, license choice, funding/conflict statements, and author inspection of the arXiv-generated preview.
 
 ## Caution
 
@@ -97,4 +103,3 @@ The manuscript is a no-go/classification framework plus controlled toy calculati
 ## License
 
 License choice is pending final author decision. If you reuse or cite material before a license is added, please contact the author.
-

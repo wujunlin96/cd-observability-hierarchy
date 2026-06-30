@@ -22,7 +22,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DRAFT = ROOT / "draft" / "main_observability_hierarchy.md"
-BIB = ROOT / "references" / "references.bib"
+BIB = next(
+    (
+        path
+        for path in [
+            ROOT / "references" / "references.bib",
+            ROOT / "paper" / "references.bib",
+            ROOT / "references" / "observability_used_references.bib",
+        ]
+        if path.exists()
+    ),
+    ROOT / "references" / "references.bib",
+)
 OUT = ROOT / "results" / "citation_sentence_audit.csv"
 
 
