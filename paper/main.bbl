@@ -1,0 +1,204 @@
+\begin{thebibliography}{27}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Albrecht and Magueijo(1999)]{AlbrechtMagueijo1999VSL}
+Andreas Albrecht and Joao Magueijo.
+\newblock A time varying speed of light as a solution to cosmological puzzles.
+\newblock \emph{Physical Review D}, 59:\penalty0 043516, 1999.
+\newblock \doi{10.1103/PhysRevD.59.043516}.
+
+\bibitem[Amelino-Camelia et~al.(2011)Amelino-Camelia, Freidel,
+  Kowalski-Glikman, and Smolin]{AmelinoCamelia2011RelativeLocality}
+Giovanni Amelino-Camelia, Laurent Freidel, Jerzy Kowalski-Glikman, and Lee
+  Smolin.
+\newblock The principle of relative locality.
+\newblock \emph{Physical Review D}, 84:\penalty0 084010, 2011.
+\newblock \doi{10.1103/PhysRevD.84.084010}.
+
+\bibitem[Barenboim et~al.(2020)Barenboim, Martinez-Mirave, Ternes, and
+  Tortola]{Barenboim2019SterileADRRevisited}
+G.~Barenboim, P.~Martinez-Mirave, C.~A. Ternes, and M.~Tortola.
+\newblock Sterile neutrinos with altered dispersion relations revisited.
+\newblock \emph{Journal of High Energy Physics}, 2020\penalty0 (3):\penalty0
+  70, 2020.
+\newblock \doi{10.1007/JHEP03(2020)070}.
+
+\bibitem[Bekenstein(1993)]{Bekenstein1993DisformalGeometry}
+Jacob~D. Bekenstein.
+\newblock The relation between physical and gravitational geometry.
+\newblock \emph{Physical Review D}, 48:\penalty0 3641--3647, 1993.
+\newblock \doi{10.1103/PhysRevD.48.3641}.
+
+\bibitem[Chashchina and
+  Silagadze(2012)]{ChashchinaSilagadze2012LightSpeedBarrier}
+O.~I. Chashchina and Z.~K. Silagadze.
+\newblock Breaking the light speed barrier.
+\newblock \emph{Acta Physica Polonica B}, 43:\penalty0 1917--1952, 2012.
+\newblock \doi{10.5506/APhysPolB.43.1917}.
+
+\bibitem[Colladay and Kostelecky(1998)]{ColladayKostelecky1998SME}
+Don Colladay and V.~Alan Kostelecky.
+\newblock Lorentz-violating extension of the standard model.
+\newblock \emph{Physical Review D}, 58:\penalty0 116002, 1998.
+\newblock \doi{10.1103/PhysRevD.58.116002}.
+
+\bibitem[De~Angelis and
+  Pain(2002)]{DeAngelisPain2002PhotonVelocityOscillations}
+A.~De~Angelis and R.~Pain.
+\newblock Improved limits on photon velocity oscillations.
+\newblock \emph{Modern Physics Letters A}, 17:\penalty0 2491--2496, 2002.
+\newblock \doi{10.1142/S021773230200926X}.
+
+\bibitem[Derevianko and
+  Pospelov(2014)]{DereviankoPospelov2013TopologicalDMClocks}
+A.~Derevianko and M.~Pospelov.
+\newblock Hunting for topological dark matter with atomic clocks.
+\newblock \emph{Nature Physics}, 10:\penalty0 933--936, 2014.
+\newblock \doi{10.1038/nphys3137}.
+
+\bibitem[Glashow(1998)]{Glashow1998PhotonVelocityOscillations}
+Sheldon~L. Glashow.
+\newblock Cosmological searches for photon velocity oscillations.
+\newblock \emph{Physics Letters B}, 430:\penalty0 54--56, 1998.
+\newblock \doi{10.1016/S0370-2693(98)00522-6}.
+
+\bibitem[Hassan and Rosen(2012{\natexlab{a}})]{HassanRosen2011Bimetric}
+S.~F. Hassan and Rachel~A. Rosen.
+\newblock Bimetric gravity from ghost-free massive gravity.
+\newblock \emph{Journal of High Energy Physics}, 2012\penalty0 (2):\penalty0
+  126, 2012{\natexlab{a}}.
+\newblock \doi{10.1007/JHEP02(2012)126}.
+
+\bibitem[Hassan and Rosen(2012{\natexlab{b}})]{HassanRosen2011Secondary}
+S.~F. Hassan and Rachel~A. Rosen.
+\newblock Confirmation of the secondary constraint and absence of ghost in
+  massive gravity and bimetric gravity.
+\newblock \emph{Journal of High Energy Physics}, 2012\penalty0 (4):\penalty0
+  123, 2012{\natexlab{b}}.
+\newblock \doi{10.1007/JHEP04(2012)123}.
+
+\bibitem[Hobson and Lasenby(2020)]{HobsonLasenby2020WeylNoSecondClock}
+Michael Hobson and Anthony Lasenby.
+\newblock Weyl gauge theories of gravity do not predict a second clock effect.
+\newblock \emph{Physical Review D}, 102\penalty0 (8):\penalty0 084040, 2020.
+\newblock \doi{10.1103/PhysRevD.102.084040}.
+
+\bibitem[Hobson and Lasenby(2022)]{HobsonLasenby2021SecondClockNote}
+Michael Hobson and Anthony Lasenby.
+\newblock Note on the absence of the second clock effect in weyl gauge theories
+  of gravity.
+\newblock \emph{Physical Review D}, 105\penalty0 (2):\penalty0 L021501, 2022.
+\newblock \doi{10.1103/PhysRevD.105.L021501}.
+
+\bibitem[Hollenberg and P{\"a}s(2009)]{HollenbergPaes2009ADRResonance}
+Sebastian Hollenberg and Heinrich P{\"a}s.
+\newblock Resonant active-sterile neutrino mixing in the presence of matter
+  potentials and altered dispersion relations.
+\newblock \emph{Physical Review D}, 80:\penalty0 093005, 2009.
+\newblock \doi{10.1103/PhysRevD.80.093005}.
+
+\bibitem[Jacobson(2008)]{Jacobson2008EinsteinAetherStatus}
+Ted Jacobson.
+\newblock Einstein-aether gravity: A status report.
+\newblock \emph{Proceedings of Science}, QG-Ph:\penalty0 020, 2008.
+\newblock \doi{10.22323/1.043.0020}.
+
+\bibitem[Kostelecky and Mewes(2004)]{KosteleckyMewes2004Neutrinos}
+V.~Alan Kostelecky and Matthew Mewes.
+\newblock Lorentz and {CPT} violation in neutrinos.
+\newblock \emph{Physical Review D}, 69:\penalty0 016005, 2004.
+\newblock \doi{10.1103/PhysRevD.69.016005}.
+
+\bibitem[Kostelecky and Russell(2011)]{KosteleckyRussell2011DataTablesSME}
+V.~Alan Kostelecky and Neil Russell.
+\newblock Data tables for lorentz and {CPT} violation.
+\newblock \emph{Reviews of Modern Physics}, 83:\penalty0 11--31, 2011.
+\newblock \doi{10.1103/RevModPhys.83.11}.
+\newblock Living update; arXiv v19 checked 2026-06-30.
+
+\bibitem[{LIGO Scientific Collaboration} et~al.(2017){LIGO Scientific
+  Collaboration}, {Virgo Collaboration}, {Fermi Gamma-Ray Burst Monitor}, and
+  {INTEGRAL}]{LIGO2017GW170817GRB}
+{LIGO Scientific Collaboration}, {Virgo Collaboration}, {Fermi Gamma-Ray Burst
+  Monitor}, and {INTEGRAL}.
+\newblock Gravitational waves and gamma-rays from a binary neutron star merger:
+  {GW170817} and {GRB} 170817a.
+\newblock \emph{The Astrophysical Journal Letters}, 848\penalty0 (2):\penalty0
+  L13, 2017.
+\newblock \doi{10.3847/2041-8213/aa920c}.
+
+\bibitem[Lobo and Romero(2018)]{LoboRomero2018SecondClockConstraints}
+I.~P. Lobo and C.~Romero.
+\newblock Experimental constraints on the second clock effect.
+\newblock \emph{Physics Letters B}, 783:\penalty0 306--310, 2018.
+\newblock \doi{10.1016/j.physletb.2018.07.019}.
+
+\bibitem[Magueijo(2003)]{Magueijo2003VSLReview}
+Joao Magueijo.
+\newblock New varying speed of light theories.
+\newblock \emph{Reports on Progress in Physics}, 66:\penalty0 2025--2068, 2003.
+\newblock \doi{10.1088/0034-4885/66/11/R04}.
+
+\bibitem[Magueijo(2009)]{Magueijo2008BimetricVSL}
+Joao Magueijo.
+\newblock Bimetric varying speed of light theories and primordial fluctuations.
+\newblock \emph{Physical Review D}, 79:\penalty0 043525, 2009.
+\newblock \doi{10.1103/PhysRevD.79.043525}.
+
+\bibitem[Moffat(2003)]{Moffat2002VSLTheories}
+J.~W. Moffat.
+\newblock Variable speed of light theories.
+\newblock \emph{Astrophysics and Space Science}, 283\penalty0 (4):\penalty0
+  505--509, 2003.
+\newblock \doi{10.1023/A:1022512919648}.
+
+\bibitem[P{\"a}s et~al.(2005)P{\"a}s, Pakvasa, and
+  Weiler]{PaesPakvasaWeiler2005ShortcutSterile}
+Heinrich P{\"a}s, Sandip Pakvasa, and Thomas~J. Weiler.
+\newblock Sterile-active neutrino oscillations and shortcuts in the extra
+  dimension.
+\newblock \emph{Physical Review D}, 72:\penalty0 095017, 2005.
+\newblock \doi{10.1103/PhysRevD.72.095017}.
+
+\bibitem[Redigolo(2012)]{Redigolo2012LorentzViolatingSUSY}
+Diego Redigolo.
+\newblock On lorentz-violating supersymmetric quantum field theories.
+\newblock \emph{Physical Review D}, 85:\penalty0 085009, 2012.
+\newblock \doi{10.1103/PhysRevD.85.085009}.
+
+\bibitem[Roberts et~al.(2017)Roberts, Blewitt, Dailey, Murphy, Pospelov,
+  Rollings, Sherman, Williams, and Derevianko]{Roberts2017GPSDomainWallDM}
+Benjamin~M. Roberts, Geoffrey Blewitt, Conner Dailey, Mac Murphy, Maxim
+  Pospelov, Alex Rollings, Jeff Sherman, Wyatt Williams, and Andrei Derevianko.
+\newblock Search for domain wall dark matter with atomic clocks on board global
+  positioning system satellites.
+\newblock \emph{Nature Communications}, 8:\penalty0 1195, 2017.
+\newblock \doi{10.1038/s41467-017-01440-4}.
+
+\bibitem[Wcislo et~al.(2018)Wcislo, Ablewski, Beloy, Bilicki, Bober, Brown,
+  Fasano, Ciurylo, Hachisu, Ido, Lodewyck, Ludlow, McGrew, Morzynski, Nicolodi,
+  Schioppo, Sekido, Le~Targat, Wolf, Zhang, Zjawin, and
+  Zawada]{Wcislo2018GlobalClockNetworkDM}
+P.~Wcislo, P.~Ablewski, K.~Beloy, S.~Bilicki, M.~Bober, R.~Brown, R.~Fasano,
+  R.~Ciurylo, H.~Hachisu, T.~Ido, J.~Lodewyck, A.~Ludlow, W.~McGrew,
+  P.~Morzynski, D.~Nicolodi, M.~Schioppo, M.~Sekido, R.~Le~Targat, P.~Wolf,
+  X.~Zhang, B.~Zjawin, and M.~Zawada.
+\newblock First observation with global network of optical atomic clocks aimed
+  for a dark matter detection.
+\newblock \emph{Science Advances}, 4:\penalty0 eaau4869, 2018.
+\newblock \doi{10.1126/sciadv.aau4869}.
+
+\bibitem[Wcislo et~al.(2016)Wcislo, Morzynski, Bober, Cygan, Lisak, Ciurylo,
+  and Zawada]{Wcislo2016OpticalClocksTopologicalDM}
+Piotr Wcislo, Piotr Morzynski, Marcin Bober, Agata Cygan, Daniel Lisak, Roman
+  Ciurylo, and Michal Zawada.
+\newblock Searching for topological defect dark matter with optical atomic
+  clocks.
+\newblock \emph{Nature Astronomy}, 1:\penalty0 0009, 2016.
+\newblock \doi{10.1038/s41550-016-0009}.
+
+\end{thebibliography}

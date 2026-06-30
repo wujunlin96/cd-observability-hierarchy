@@ -1,0 +1,31 @@
+forecast_type,observable,xi,D_over_C,mismatch_abs_1_minus_C_over_D,input_scale,derived_scale,interpretation
+interface_delay,1_ns,1.000000000e+00,1.414213562e+00,2.928932188e-01,1.000000000e-09 s,1.023555476e+00 m,hidden segment length needed for a visible time offset
+interface_delay,1_ns,1.000000000e-03,1.000499875e+00,4.996253122e-04,1.000000000e-09 s,6.000345672e+02 m,hidden segment length needed for a visible time offset
+interface_delay,1_ns,1.000000000e-06,1.000000500e+00,4.999996250e-07,1.000000000e-09 s,5.995853656e+05 m,hidden segment length needed for a visible time offset
+interface_delay,1_us,1.000000000e+00,1.414213562e+00,2.928932188e-01,1.000000000e-06 s,1.023555476e+03 m,hidden segment length needed for a visible time offset
+interface_delay,1_us,1.000000000e-03,1.000499875e+00,4.996253122e-04,1.000000000e-06 s,6.000345672e+05 m,hidden segment length needed for a visible time offset
+interface_delay,1_us,1.000000000e-06,1.000000500e+00,4.999996250e-07,1.000000000e-06 s,5.995853656e+08 m,hidden segment length needed for a visible time offset
+interface_delay,1_ms,1.000000000e+00,1.414213562e+00,2.928932188e-01,1.000000000e-03 s,1.023555476e+06 m,hidden segment length needed for a visible time offset
+interface_delay,1_ms,1.000000000e-03,1.000499875e+00,4.996253122e-04,1.000000000e-03 s,6.000345672e+08 m,hidden segment length needed for a visible time offset
+interface_delay,1_ms,1.000000000e-06,1.000000500e+00,4.999996250e-07,1.000000000e-03 s,5.995853656e+11 m,hidden segment length needed for a visible time offset
+interface_coherence,1_m,1.000000000e+00,1.414213562e+00,2.928932188e-01,1.000000000e+00 m,1.629039135e+08 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1_m,1.000000000e-03,1.000499875e+00,4.996253122e-04,1.000000000e+00 m,9.549846740e+10 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1_m,1.000000000e-06,1.000000500e+00,4.999996250e-07,1.000000000e+00 m,9.542697475e+13 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1_km,1.000000000e+00,1.414213562e+00,2.928932188e-01,1.000000000e+03 m,1.629039135e+05 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1_km,1.000000000e-03,1.000499875e+00,4.996253122e-04,1.000000000e+03 m,9.549846740e+07 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1_km,1.000000000e-06,1.000000500e+00,4.999996250e-07,1.000000000e+03 m,9.542697475e+10 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1000_km,1.000000000e+00,1.414213562e+00,2.928932188e-01,1.000000000e+06 m,1.629039135e+02 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1000_km,1.000000000e-03,1.000499875e+00,4.996253122e-04,1.000000000e+06 m,9.549846740e+04 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+interface_coherence,1000_km,1.000000000e-06,1.000000500e+00,4.999996250e-07,1.000000000e+06 m,9.542697475e+07 Hz,frequency above which finite-wall phase mismatch suppresses conversion
+relative_holonomy_clock,microwave_clock_9GHz_0p01_rad_1_s_event,,,,9.192631770e+09 Hz; 1.000000000e+00 s,1.731331648e-13 s; y~1.731331648e-13,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,microwave_clock_9GHz_0p01_rad_1_hour_event,,,,9.192631770e+09 Hz; 3.600000000e+03 s,1.731331648e-13 s; y~4.809254577e-17,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,microwave_clock_9GHz_1_rad_1_s_event,,,,9.192631770e+09 Hz; 1.000000000e+00 s,1.731331648e-11 s; y~1.731331648e-11,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,microwave_clock_9GHz_1_rad_1_hour_event,,,,9.192631770e+09 Hz; 3.600000000e+03 s,1.731331648e-11 s; y~4.809254577e-15,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_4e14Hz_0p01_rad_1_s_event,,,,4.000000000e+14 Hz; 1.000000000e+00 s,3.978873577e-18 s; y~3.978873577e-18,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_4e14Hz_0p01_rad_1_hour_event,,,,4.000000000e+14 Hz; 3.600000000e+03 s,3.978873577e-18 s; y~1.105242660e-21,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_4e14Hz_1_rad_1_s_event,,,,4.000000000e+14 Hz; 1.000000000e+00 s,3.978873577e-16 s; y~3.978873577e-16,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_4e14Hz_1_rad_1_hour_event,,,,4.000000000e+14 Hz; 3.600000000e+03 s,3.978873577e-16 s; y~1.105242660e-19,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_1e15Hz_0p01_rad_1_s_event,,,,1.000000000e+15 Hz; 1.000000000e+00 s,1.591549431e-18 s; y~1.591549431e-18,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_1e15Hz_0p01_rad_1_hour_event,,,,1.000000000e+15 Hz; 3.600000000e+03 s,1.591549431e-18 s; y~4.420970641e-22,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_1e15Hz_1_rad_1_s_event,,,,1.000000000e+15 Hz; 1.000000000e+00 s,1.591549431e-16 s; y~1.591549431e-16,clock proper-time step and event-averaged fractional shift for target holonomy phase
+relative_holonomy_clock,optical_clock_1e15Hz_1_rad_1_hour_event,,,,1.000000000e+15 Hz; 3.600000000e+03 s,1.591549431e-16 s; y~4.420970641e-20,clock proper-time step and event-averaged fractional shift for target holonomy phase

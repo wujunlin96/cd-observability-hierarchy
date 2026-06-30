@@ -1,0 +1,10 @@
+{
+  "ready_for_build": false,
+  "author_name": "TODO_FULL_NAME",
+  "affiliation": "Independent Researcher",
+  "email": "TODO_EMAIL",
+  "funding_statement": "No external funding was received for this work.",
+  "conflict_of_interest_statement": "The author declares no conflicts of interest.",
+  "author_contributions": "The author supplied the motivating C-D question and research direction, reviewed the theoretical claims, and is responsible for the final interpretation and submission. AI assistance was used for mathematical organization, code generation, reproducibility checks, literature-boundary auditing, and manuscript drafting support.",
+  "ai_assistance_disclosure": "The author used AI assistance for mathematical exploration, literature-search organization, manuscript drafting support, code generation, and internal consistency checks. The author is responsible for the final claims, interpretation, and submission."
+}
