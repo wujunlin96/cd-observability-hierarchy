@@ -12,7 +12,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DRAFT = ROOT / "draft" / "main_observability_hierarchy.md"
 USED_BIB = ROOT / "references" / "observability_used_references.bib"
 FIGURE_PNG = ROOT / "figures" / "interface_wall_filter.png"
-OUT = ROOT / "submission" / "arxiv_cd_observability"
+OUT = (
+    ROOT / "paper"
+    if (ROOT / "paper").exists() and not (ROOT / "submission").exists()
+    else ROOT / "submission" / "arxiv_cd_observability"
+)
 SUBMISSION_METADATA = ROOT / "config" / "submission_metadata.json"
 
 

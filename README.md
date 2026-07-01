@@ -34,9 +34,11 @@ scripts/
   cd_common_cone_symbolic_check.py
   cd_interface_delta_scattering.py
   cd_finite_wall_transfer_scan.py
+  cd_interface_frequency_scaling.py
   cd_interface_holonomy_forecast.py
   plot_interface_wall_filter.py
   plot_interface_wall_filter_png.py
+  reproduce_core.py
   audit_*.py
 
 results/
@@ -47,6 +49,7 @@ notes/
   current_research_decision_v109.md
   external_ai_review_triage_v132.md
   external_ai_review_triage_v133.md
+  external_ai_review_triage_v134.md
   journal_upgrade_ledger_v131.md
   novelty_adversarial_audit_v122.md
   novelty_external_audit_v107.md
@@ -63,13 +66,25 @@ references/
 
 ## Quick Checks
 
-Install Python dependencies:
+Use Python 3.10+ and install the lightweight numerical/build dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the core symbolic checks:
+Run the full local reproduction pipeline:
+
+```bash
+python scripts/reproduce_core.py
+```
+
+Run the optional network-dependent citation checks:
+
+```bash
+python scripts/reproduce_core.py --with-network
+```
+
+Or run individual checks. Core symbolic checks:
 
 ```bash
 python scripts/cd_no_go_symbolic_checks.py
@@ -94,11 +109,27 @@ python scripts/audit_latex_preprint.py
 
 `audit_latex_preprint.py` compiles with a local TeX engine if available. The manuscript was locally compiled with Tectonic in the working environment used to prepare this release.
 
+## Figure/Data Mapping
+
+The main figure is generated from the finite-wall scan:
+
+```text
+results/cd_finite_wall_transfer_scan.csv
+  -> scripts/plot_interface_wall_filter.py
+  -> figures/interface_wall_filter.svg
+
+results/cd_finite_wall_transfer_scan.csv
+  -> scripts/plot_interface_wall_filter_png.py
+  -> figures/interface_wall_filter.png
+```
+
+Script names use lowercase snake_case. The arXiv-style LaTeX package uses the PNG copy under `paper/figures/`.
+
 ## Current Status
 
 This is a pre-arXiv public artifact bundle. The manuscript now includes formal no-go propositions, an interface/relative-holonomy morphology vector, and conservative forecast-scale tables.
 
-The compiled PDF is 19 pages. The technical package passes the manuscript, LaTeX, citation-sentence, reference-identifier, and source-zip audits. Remaining blockers are human checks: final reading of the PDF by the author, comparison with the arXiv-generated preview, and endorsement if arXiv requests it.
+The compiled PDF is 20 pages. The technical package passes the manuscript, LaTeX, citation-sentence, reference-identifier, and source-zip audits. Remaining blockers are human checks: final reading of the PDF by the author, comparison with the arXiv-generated preview, and endorsement if arXiv requests it.
 
 The manuscript is still intentionally limited. The internal notes include a journal-upgrade ledger for future work such as EFT matching, quantum consistency, four-dimensional propagation, causal structure, and a data-facing forecast. Those project-management notes are not part of the manuscript body.
 

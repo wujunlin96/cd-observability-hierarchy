@@ -192,8 +192,10 @@ def main() -> None:
     out_dir.mkdir(exist_ok=True)
 
     rows = []
+    d_over_c_values = [1.0, np.sqrt(1.0 + 1e-3), 1.2, 2.0]
+
     for profile in ["square", "sech2"]:
-        for d_over_c in [1.0, 1.2, 2.0]:
+        for d_over_c in d_over_c_values:
             for alpha_int in [1e-2, 0.1, 1.0]:
                 for zeta in [1e-3, 1e-2, 0.1, 0.3, 1.0, 3.0, 10.0, 30.0]:
                     n_steps = 1200 if profile == "sech2" and zeta >= 10 else 600

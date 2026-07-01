@@ -16,14 +16,14 @@ The main result is negative but useful: exact local relativity erases a local C-
 
 The work is deliberately narrower than a general Lorentz-violation or bimetric-gravity program. The idea that different sectors may carry different limiting speeds is not new; it appears in Lorentz-violating field-theory and superluminal-particle discussions [@Redigolo2012LorentzViolatingSUSY; @ChashchinaSilagadze2012LightSpeedBarrier]. Local visible-sector Lorentz violation is already systematically parameterized and tightly constrained by the Standard-Model Extension (SME) [@ColladayKostelecky1998SME; @KosteleckyRussell2011DataTablesSME]. Disformal metrics and preferred timelike fields have a long history [@Bekenstein1993DisformalGeometry; @Jacobson2008EinsteinAetherStatus]. Photon velocity oscillations and active-sterile altered-dispersion models already cover important portal phenomenology [@Glashow1998PhotonVelocityOscillations; @DeAngelisPain2002PhotonVelocityOscillations; @KosteleckyMewes2004Neutrinos; @PaesPakvasaWeiler2005ShortcutSterile; @HollenbergPaes2009ADRResonance; @Barenboim2019SterileADRRevisited]. Our goal is not to rename these fields. Our goal is to state what the C-D hypothesis adds before it enters them.
 
-The contribution is an observability hierarchy. First, constant local maps fail to produce a second cone. Second, smooth nonlinear point maps still fail if they remain Lorentz equivariant and lack background tensors. Third, flat relative calibration connections are pure gauge. Fourth, the remaining escape classes can be organized by which assumption they break and which known constraints they must pass. The value added over generic bimetric, disformal, or SME parameter language is the joint morphology constraint: the same failure mode should account for a linked vector of observables, not merely for one fitted speed parameter.
+The contribution is an observability hierarchy with three local no-go layers and one diagnostic object. Constant local maps fail to produce a second cone; smooth nonlinear point maps still fail if they remain Lorentz equivariant and lack background tensors; flat relative calibration connections are pure gauge on simply connected regions. Once one of these assumptions is broken, the proposed signal must be tested through the joint morphology vector \({\cal M}_{CD}\), not through a single fitted speed parameter.
 
 ### Contribution and Scope
 
 | This paper claims | This paper does not claim |
 |---|---|
 | \(D/C\) is locally unobservable under exact common Lorentz equivariance, smooth sector maps, and flat relative calibration | Multiple limiting speeds are new |
-| C-D observability requires a named failure mode: background field, holonomy, defect/interface, or portal projection | A visible observer can directly measure a large second photon speed |
+| C-D observability requires a named failure mode and a constrained morphology vector \({\cal M}_{CD}\) | A visible observer can directly measure a large second photon speed |
 | The escape classes are constrained by known SME, disformal, aether, clock, portal, and multimetric literatures | Disformal metrics, SME coefficients, Weyl effects, hidden photons, or multimetric gravity are new by themselves |
 | A finite interface gives a calculable coherence filter for one controlled escape route | The toy interface is already a realistic cosmological or laboratory detection proposal |
 
@@ -44,6 +44,8 @@ Let \(V\simeq\mathbb{R}^{1,3}\) be a local inertial tangent space equipped with 
 ### Notation and Conventions
 
 The letters \(C\) and \(D\) denote sectoral speed scales. They are not spacetime coordinates. We keep \(C\) and \(D\) explicit rather than setting the visible light speed to one. In wave calculations we use phase convention \(e^{-i\omega t}\), with right-moving spatial dependence \(e^{+ikz}\) and \(k_i=\omega/v_i\). The delta-interface coupling is denoted \(\lambda\), while a finite wall uses the integrated coupling \(\lambda_{\rm int}=\int dz\,\lambda(z)\) and \(\alpha_{\rm int}=\lambda_{\rm int}/(2\omega\sqrt{CD})\). In the delta limit, \(\lambda_{\rm int}\to\lambda\) and \(\alpha_{\rm int}\to\alpha\).
+
+The recurring terms are used as follows. \(G_{\rm common}=O(g)\cap O(f)\) is the common local symmetry group of the visible and hidden cones. A relative calibration connection is the bookkeeping connection that compares sectoral clocks, rods, or phases along paths. An escape class is classified by the first no-go assumption it breaks. The morphology vector \({\cal M}_{CD}\) is the minimal observable pattern that a proposed C-D signal must fit jointly.
 
 We define C-D observability as at least one of the following:
 
@@ -236,19 +238,27 @@ f_{\mu\nu}=\alpha g_{\mu\nu}.
 
 A full common Lorentz principle thus permits only a conformal second metric, which has the same null cone. When the two metrics are required to have the same time and space orientation, one may write \(\alpha=\Omega^2>0\). A genuine \(D/C\neq1\) cone can still be logically consistent, but it requires one of three moves: independent sector Lorentz groups with no local comparison, a proper-subgroup common symmetry selected by a background field, or a nonlocal/global calibration failure such as holonomy or an interface. This is the sense in which the relativity principle is constrained rather than discarded.
 
-The preferred-field representative makes the point explicit. Let \(u^\mu\) be a \(g\)-unit timelike vector, \(g_{\mu\nu}u^\mu u^\nu=-1\), and take \(\xi>-1\) so that the displayed metric is nondegenerate with Lorentzian signature in the local rest frame. In that frame, with \(C=1\) and signature \((-+++)\),
+The preferred-field representative makes the point explicit. Let \(u^\mu\) be a \(g\)-unit timelike vector, \(g_{\mu\nu}u^\mu u^\nu=-1\), and take \(\xi>-1\) so that the displayed metric is nondegenerate with Lorentzian signature in the local rest frame. In visible coordinates, choose
+
+\[
+g_{\mu\nu}dx^\mu dx^\nu=-C^2dt^2+d\mathbf{x}^2,
+\qquad
+u_\mu dx^\mu=-Cdt .
+\]
+
+Then the representative hidden metric
 
 \[
 f_{\mu\nu}=\Omega^2(g_{\mu\nu}-\xi u_\mu u_\nu)
 \]
 
-gives
+has null condition
 
 \[
 0=f_{\mu\nu}dx^\mu dx^\nu
-=\Omega^2[-(1+\xi)dt^2+d\mathbf{x}^2],
+=\Omega^2[-(1+\xi)C^2dt^2+d\mathbf{x}^2],
 \qquad
-v_D=\sqrt{1+\xi}.
+D=C\sqrt{1+\xi}.
 \]
 
 Thus \(D/C=\sqrt{1+\xi}\) is a hidden-metric statement, not yet a visible observable. It becomes visible only through a portal or a nontrivial relative calibration; any local leakage into Standard-Model fields must then appear as constrained Lorentz-violating effective coefficients, schematically of order portal strength times \(\xi u^\mu u^\nu\).
@@ -267,16 +277,16 @@ The practical checklist is:
 
 ## 5. Escape Classes
 
-| Escape class | Broken assumption | Typical observable | Required literature boundary |
+| Primary broken assumption | Escape class | Typical observable | Required literature boundary |
 |---|---|---|---|
-| Hidden preferred-field cone | No background tensor | Portal-induced SME-like coefficient | SME, disformal, aether |
-| Relative holonomy | Flat relative connection | Closed-loop clock or phase holonomy | Weyl/nonmetricity, clock networks |
-| Interface/defect | Smooth global calibration | Conversion, echo, transient | Domain walls, defect searches |
-| Portal-projected EFT texture | Exact decoupling | Low-rank SME/dark-sector coefficients | SME, sterile/ADR, dark-photon bounds |
-| Deformed momentum-space relativity | Ordinary locality/composition | Modified conservation/boost kinematics | Relative locality / DSR [@AmelinoCamelia2011RelativeLocality] |
-| Dynamical multimetric gravity | Single visible metric | Spin-2 mixing, GW propagation | Ghost-free bimetric, GW170817 [@HassanRosen2011Bimetric; @HassanRosen2011Secondary; @LIGO2017GW170817GRB] |
+| No background tensor | Hidden preferred-field cone | Portal-induced SME-like coefficient | SME, disformal, aether |
+| Flat relative connection | Relative holonomy | Closed-loop clock or phase holonomy | Weyl/nonmetricity, clock networks |
+| Smooth global calibration | Interface/defect | Conversion, echo, transient | Domain walls, defect searches |
+| Exact decoupling | Portal-projected EFT texture | Low-rank SME/dark-sector coefficients | SME, sterile/ADR, dark-photon bounds |
+| Ordinary locality/composition | Deformed momentum-space relativity | Modified conservation/boost kinematics | Relative locality / DSR [@AmelinoCamelia2011RelativeLocality] |
+| Single visible metric | Dynamical multimetric gravity | Spin-2 mixing, GW propagation | Ghost-free bimetric, GW170817 [@HassanRosen2011Bimetric; @HassanRosen2011Secondary; @LIGO2017GW170817GRB] |
 
-The table is also a warning. Most escape classes are not empty spaces in the literature. Their value here is that the C-D no-go hierarchy tells us why they are necessary.
+The table is a primary-failure classification, not a claim that real models break only one assumption. If a model breaks several assumptions, it should be classified by the first local no-go layer that fails and then checked against the additional literature boundaries it enters.
 
 ## 6. Worked Example: A C-D Interface
 
@@ -293,43 +303,43 @@ We now give a minimal calculable escape. Consider two one-dimensional massless s
 For \(\phi_i=e^{-i\omega t}\psi_i(z)\), define
 
 \[
-k_C={\omega\over C},\qquad k_D={\omega\over D}.
+k_C=\frac{\omega}{C},\qquad k_D=\frac{\omega}{D}.
 \]
 
 The interface imposes continuity of \(\psi_i\) and derivative jumps
 
 \[
-\psi_C'(0^+)-\psi_C'(0^-)= {\lambda\over C^2}\psi_D(0),
+\psi_C'(0^+)-\psi_C'(0^-)= \frac{\lambda}{C^2}\psi_D(0),
 \]
 
 \[
-\psi_D'(0^+)-\psi_D'(0^-)= {\lambda\over D^2}\psi_C(0).
+\psi_D'(0^+)-\psi_D'(0^-)= \frac{\lambda}{D^2}\psi_C(0).
 \]
 
 For a C wave incident from the left and no incoming D wave, define
 
 \[
-\alpha={\lambda\over 2\omega\sqrt{CD}} .
+\alpha=\frac{\lambda}{2\omega\sqrt{CD}} .
 \]
 
 The reflected, transmitted, and converted flux fractions are
 
 \[
-P_{\rm refl}={\alpha^4\over(1+\alpha^2)^2},
+P_{\rm refl}=\frac{\alpha^4}{(1+\alpha^2)^2},
 \]
 
 \[
-P_{C{\rm -trans}}={1\over(1+\alpha^2)^2},
+P_{C{\rm -trans}}=\frac{1}{(1+\alpha^2)^2},
 \]
 
 \[
-P_{C\to D}^{\rm total}={2\alpha^2\over(1+\alpha^2)^2}.
+P_{C\to D}^{\rm total}=\frac{2\alpha^2}{(1+\alpha^2)^2}.
 \]
 
 They sum to one. The forward C-to-D conversion probability is half the total:
 
 \[
-P_{C\to D}^{\rm forward}={\alpha^2\over(1+\alpha^2)^2}.
+P_{C\to D}^{\rm forward}=\frac{\alpha^2}{(1+\alpha^2)^2}.
 \]
 
 Two such interfaces give the simplest echo scaling
@@ -337,14 +347,14 @@ Two such interfaces give the simplest echo scaling
 \[
 P_{\rm echo}\sim
 \left[
-{\alpha^2\over(1+\alpha^2)^2}
+\frac{\alpha^2}{(1+\alpha^2)^2}
 \right]^2.
 \]
 
 The C-D-specific observable is the separation between conversion amplitude and hidden-path time shift:
 
 \[
-\Delta t=L_D\left({1\over D}-{1\over C}\right).
+\Delta t=L_D\left(\frac{1}{D}-\frac{1}{C}\right).
 \]
 
 With this sign convention, \(D>C\) gives a negative \(\Delta t\), i.e. an apparent advance relative to visible propagation over the same path length. The scale estimates below use \(|\Delta t|\). Large \(D/C\) can change the delay or advance, while weak interface coupling suppresses the echo amplitude.
@@ -371,7 +381,7 @@ With fixed integrated coupling and normalized wall transform
 
 \[
 {\cal F}(q)=
-{1\over\lambda_{\rm int}}
+\frac{1}{\lambda_{\rm int}}
 \int dz\,\lambda(z)e^{iqz},
 \]
 
@@ -397,16 +407,18 @@ or
 
 \[
 L_w\lesssim
-{C\over \omega |1-C/D|}.
+\frac{C}{\omega |1-C/D|}.
 \]
 
 This produces a real tension: large \(D/C\) helps create a distinctive time shift, but also increases phase mismatch and suppresses conversion through a thick wall. In a microscopic model, \(L_w\) cannot remain an arbitrary fitting length. It should be set by a wall field mass, defect tension, plasma or material response scale, or another dynamical mechanism that also controls the available energy range.
 
 ![Finite C-D interface momentum filter: wall thickness suppresses conversion once the phase mismatch \( |k_C-k_D|L_w \) exceeds unity](../figures/interface_wall_filter.svg)
 
-Figure 1 shows the representative case \(D/C=2\) and \(\alpha_{\rm int}=0.1\). This is a proof-of-principle diagnostic, not an exclusion plot. The transfer-matrix result tracks the Born Fourier-filter prediction in the weak-coupling regime. A smooth wall suppresses conversion more rapidly than a square wall, making the wall profile an observable part of the escape route rather than an arbitrary modeling detail.
+Figure 1 shows the representative case \(D/C=2\), \(\alpha_{\rm int}=0.1\), and a small-splitting comparison \(D/C=\sqrt{1+10^{-3}}\). The horizontal axis is the dimensionless wall thickness \(\zeta=\omega L_w/C\), so the coherence scale is set by \(|k_C-k_D|L_w\simeq1\). This is a proof-of-principle diagnostic, not an exclusion plot. The transfer-matrix result tracks the Born Fourier-filter prediction in the weak-coupling regime. A smooth wall suppresses conversion more rapidly than a square wall, while the small-splitting curve remains coherent across the displayed range. Thus the wall profile and cone splitting are observable parts of the escape route rather than arbitrary modeling details.
 
 The interface example is not claimed to be a new scattering formalism. Its role is to show how a C-D speed ratio becomes physical only when the smooth global calibration assumption fails.
+
+A four-dimensional photon or fermion portal would not reuse this scalar model unchanged. Polarization, spin, angular incidence, and gauge constraints change the coupling coefficients and boundary data. The robust part of the toy calculation is narrower: conversion across a finite interface samples the momentum mismatch \(k_C-k_D\), so thickness acts as a coherence filter. A realistic channel must keep this filter while adding the appropriate spin or polarization structure.
 
 It is also not a causal cosmology. If \(D>C\), a hidden segment may look like an advance in visible time. A consistent model must specify a wall frame, a global time orientation, or another causal-ordering condition that prevents controllable closed causal curves. The interface calculation only establishes flux-conserving conversion and coherence filtering in a fixed background.
 
@@ -425,7 +437,7 @@ The interface calculation suggests a conservative observational program without 
 Equivalently,
 
 \[
-L_D={C|\Delta t|\over |1-C/D|}.
+L_D=\frac{C|\Delta t|}{|1-C/D|}.
 \]
 
 For the representative hidden-metric parameterization \(D/C=\sqrt{1+\xi}\), the repository scale table gives the following order-of-magnitude targets:
@@ -450,11 +462,11 @@ This is a falsifiability gate for the interface route: an alleged C-D echo shoul
 The interface and holonomy routes give a pre-fit forecast gate. Before any event or clock-network data are interpreted as C-D evidence, the proposed signal must specify three morphology scales:
 
 \[
-L_D={C|\Delta t|\over |1-C/D|},
+L_D=\frac{C|\Delta t|}{|1-C/D|},
 \]
 
 \[
-f_{\rm coh}\simeq {C\over 2\pi L_w |1-C/D|},
+f_{\rm coh}\simeq \frac{C}{2\pi L_w |1-C/D|},
 \]
 
 and, for a clock of frequency \(\nu\),
@@ -482,7 +494,7 @@ with leading dependencies
 \[
 \Delta t\propto L_D |1-C/D|,
 \qquad
-f_{\rm coh}\propto {1\over L_w |1-C/D|},
+f_{\rm coh}\propto \frac{1}{L_w |1-C/D|},
 \]
 
 \[
@@ -494,6 +506,8 @@ P_{\rm echo}(\nu)\propto
 \]
 
 This morphology vector is the minimal phenomenological object for the interface/holonomy route. A delayed echo alone is not enough; a C-D interpretation must also specify how the echo probability changes with observing frequency, where finite-wall coherence is lost, and whether any closed-loop clock or phase observable follows from the same relative calibration structure.
+
+The same idea extends to other escape classes. For a preferred-field SME route, the vector would replace echo probability by a low-rank coefficient texture and energy dependence. For multimetric gravity, it would include spin-2 mixing and multimessenger propagation. For deformed momentum-space relativity, it would include modified conservation or boost-composition data. The point is unchanged: a C-D interpretation should be a linked pattern, not a one-parameter anomaly.
 
 The public forecast table gives conservative representative scales:
 
@@ -519,13 +533,13 @@ This gives immediate null tests:
 
 The positive target is therefore not "any anomalous delay." It is a co-constrained pattern: the same \(D/C\), wall scale \(L_w\), interface coupling \(\alpha(\nu)\), and relative connection must explain the delay, conversion strength, coherence cutoff, and possible clock phase response.
 
-## 7. Relation to Existing Programs
+## 7. Discussion: Literature Boundary and Next Routes
 
 Multi-speed sector models already exist. For example, Lorentz-violating supersymmetric field theories can contain sectors with different limiting speeds, and broader superluminal-particle discussions have explored particles whose critical speed differs from the visible speed of light [@Redigolo2012LorentzViolatingSUSY; @ChashchinaSilagadze2012LightSpeedBarrier]. The C-D hierarchy does not claim priority for the existence of multiple speed parameters. Its claim is narrower: before such parameters become new spacetime physics for a visible observer, one must identify the map, holonomy, defect, portal, or background field that prevents \(D/C\) from being removed by calibration.
 
 Varying-speed-of-light cosmologies change the status of the visible light speed or introduce bimetric/cosmological mechanisms to address early-universe puzzles [@AlbrechtMagueijo1999VSL; @Magueijo2003VSLReview; @Moffat2002VSLTheories; @Magueijo2008BimetricVSL]. The C-D question treated here is different. We do not assume that the visible-sector speed \(C\) varies in spacetime, nor do we use a varying visible \(c\) to solve horizon or flatness problems. We instead ask whether a hidden-sector speed ratio \(D/C\) has invariant observable content under exact local relativity and controlled inter-sector calibration.
 
-Local visible-sector Lorentz breaking belongs to the SME program [@ColladayKostelecky1998SME; @KosteleckyRussell2011DataTablesSME]. The C-D hierarchy does not replace the SME. It says that any visible local breaking generated by a C-D portal must land in an SME-like coefficient or justify why it does not. The present paper gives this as a consistency requirement, not as a numerical coefficient map.
+Local visible-sector Lorentz breaking belongs to the SME program [@ColladayKostelecky1998SME; @KosteleckyRussell2011DataTablesSME]. The C-D hierarchy does not replace the SME. It says that any visible local breaking generated by a C-D portal must land in an SME-like coefficient or justify why it does not. The living Data Tables are the proper entry point for current coefficient bounds. The present paper gives a matching requirement and a tree-level sketch, not a full numerical coefficient map.
 
 Disformal hidden metrics and preferred vectors sit near Bekenstein-type physical/gravitational metric relations and Einstein-aether models [@Bekenstein1993DisformalGeometry; @Jacobson2008EinsteinAetherStatus]. In this paper they are escape classes, not novelty claims.
 
@@ -537,7 +551,9 @@ Relative holonomy must be separated from ordinary Weyl second-clock effects and 
 
 Finally, full multimetric gravity is outside this work. Generic interacting spin-2 sectors face the usual ghost and consistency issues unless special structures are imposed, and visible gravity-light speed differences are tightly constrained by GW170817/GRB170817A [@HassanRosen2011Bimetric; @HassanRosen2011Secondary; @LIGO2017GW170817GRB].
 
-## 8. Limitations and Test Program
+Two routes are most natural after this classification paper. The interface/holonomy route should turn \({\cal M}_{CD}\) into a data-facing forecast with wall-scale priors. The SME route should choose a UV portal and replace the sketch in Appendix D by an operator-level coefficient map and loop-stability calculation.
+
+## 8. Limitations
 
 This manuscript is a local no-go and classification note, not a complete theory of a D sector. It does not prove the existence of a hidden spacetime, derive a UV completion, or provide a technically natural portal. The interface calculation is a one-dimensional classical scalar toy model. Its value is narrower: it preserves flux, exposes the coherence condition, and gives a concrete failure mode of smooth calibration.
 
@@ -568,7 +584,7 @@ The C-D hypothesis becomes physical only at controlled failure modes: preferred 
 
 This appendix collects the assumptions that prevent the no-go hierarchy from being misread as a universal statement about all possible hidden sectors.
 
-### A.1 Formal Proposition Statements
+### Formal Proposition Statements
 
 Let \(V\) denote the real four-vector representation of \(SO^+(1,3)\), with Lorentz metric \(\eta\). All statements below are local statements in one tangent space unless a connection is explicitly introduced.
 
@@ -579,6 +595,8 @@ A\Lambda=\Lambda A,\qquad \forall \Lambda\in SO^+(1,3),
 \]
 
 then \(A=\kappa I\). Consequently \(A\) maps the visible null cone to itself and cannot represent a second visible signal cone.
+
+Equivalently, complexify the vector representation. The \((1/2,1/2)\) representation of \(SL(2,\mathbb C)\) is irreducible, so Schur's lemma makes every complex intertwiner a scalar. A real Lorentz-commuting endomorphism is therefore the real scalar multiple \(A=\kappa I\). The block-matrix calculation in Appendix B is only a component check of this representation-theoretic statement.
 
 **Proposition A.2 (smooth point-map calibration).** Let \(F:V\to V\) be smooth and finite on each nonzero Lorentz orbit, and suppose
 
@@ -597,6 +615,8 @@ so null rays are mapped to null rays or to zero. Nonlinearity alone therefore do
 **Proposition A.3 (flat relative calibration).** In a simply connected region, an Abelian relative calibration connection \(B\) with \(dB=0\) is pure gauge, so every contractible closed-loop holonomy is trivial. In the non-Abelian case, the same conclusion holds for a smooth flat connection in a fixed global trivialization on a simply connected region; equivalently, \({\cal A}=M^{-1}dM\) for a smooth global sector map, and the Maurer-Cartan identity gives \({\cal F}=0\). Topology, curvature, singular support, and boundary jumps are therefore the routes to nontrivial relative holonomy.
 
 **Proposition A.4 (common-cone constraint).** Let \(g\) and \(f\) be two symmetric nondegenerate bilinear forms on \(V\). If the full visible Lorentz group \(O(g)\) also preserves \(f\), then \(f=\alpha g\) for a nonzero scalar \(\alpha\). Thus a full common Lorentz group permits only conformally related bilinear forms and hence a shared null cone.
+
+This is a tangent-space statement. In curved spacetime the same algebra can be repeated in a local tetrad at one point, but global cone comparison also depends on tetrad transport, relative connections, curvature, topology, and boundary data. A curved-background extension must therefore redo the argument with those structures specified.
 
 These propositions are conditional. They do not apply to maps with extra internal indices, spacetime-dependent backgrounds, singular defects, nonlocal propagation, momentum-space deformations, topology, or portal-induced effective coefficients. Those are not afterthought loopholes; they are the controlled C-D observability routes.
 
@@ -627,7 +647,7 @@ This symbolic check is not a substitute for the proposition. It is a reproducibi
 The finite-wall calculation rewrites the coupled channel equations as a first-order transfer system:
 
 \[
-{d\over dz}
+\frac{d}{dz}
 \begin{pmatrix}
 \psi_C\\
 \psi_C'\\
@@ -669,7 +689,7 @@ Suppose a hidden cone splitting is represented locally by a \(g\)-unit timelike 
 
 \[
 \Delta{\cal L}_\psi=
-{i\over2}\epsilon_\psi u_\mu u_\nu
+\frac{i}{2}\epsilon_\psi u_\mu u_\nu
 \bar\psi\gamma^\mu\overleftrightarrow{\partial^\nu}\psi,
 \qquad
 \epsilon_\psi=\zeta_\psi\xi+O(\xi^2),
@@ -695,7 +715,7 @@ The loop problem is visible already at the level of dimensional analysis. For a 
 
 \[
 \delta c_{\mu\nu}^{\rm loop}
-\sim {g^2\over16\pi^2}\xi u_\mu u_\nu
+\sim \frac{g^2}{16\pi^2}\xi u_\mu u_\nu
 \]
 
 unless a symmetry, sequestering mechanism, emergent low-energy structure, or fine tuning suppresses it. This estimate is the reason the visible-relativity protection principle is a quantitative naturalness requirement rather than a slogan.

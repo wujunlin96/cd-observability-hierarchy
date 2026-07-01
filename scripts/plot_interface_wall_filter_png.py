@@ -135,8 +135,8 @@ def main() -> None:
         box = draw.textbbox((0, 0), label, font=f12)
         draw.text((x0 - 24 - (box[2] - box[0]), y - (box[3] - box[1]) / 2), label, font=f12, fill="#222")
 
-    centered(draw, (WIDTH / 2, 68), "Finite C-D interface as a momentum filter (D/C=2, alpha_int=0.1)", f18)
-    centered(draw, (WIDTH / 2, HEIGHT - 50), "wall thickness zeta = omega L_w / C", f14)
+    centered(draw, (WIDTH / 2, 68), "Finite C-D interface as a momentum filter", f18)
+    centered(draw, (WIDTH / 2, HEIGHT - 50), "dimensionless wall thickness zeta = omega L_w / C", f14)
     ylabel = Image.new("RGBA", (560, 54), (255, 255, 255, 0))
     ydraw = ImageDraw.Draw(ylabel)
     centered(ydraw, (280, 27), "P_forward / P_delta,forward", f14)
@@ -144,9 +144,10 @@ def main() -> None:
 
     x_coh = sx(2.0)
     dashed_line(draw, (x_coh, y0, x_coh, y1), "#555", 3)
-    draw.text((x_coh + 18, sy(0.03) - 10), "|k_C-k_D| L_w ~= 1", font=f12, fill="#333")
+    draw.text((x_coh + 18, sy(0.03) - 10), "D/C=2 coherence: |k_C-k_D| L_w ~= 1", font=f12, fill="#333")
 
     colors = {"square": "#1f77b4", "sech2": "#d62728"}
+    small_split_d = math.sqrt(1.0 + 1e-3)
     for i, profile in enumerate(["square", "sech2"]):
         subset = [
             r
@@ -176,6 +177,34 @@ def main() -> None:
         draw.text((x + 108, y - 16), f"{label}: transfer matrix", font=f12, fill="#222")
         dashed_line(draw, (x, y + 36, x + 88, y + 36), color, 5)
         draw.text((x + 108, y + 20), f"{label}: Born filter", font=f12, fill="#222")
+
+    small_subset = [
+        r
+        for r in rows
+        if r["profile"] == "sech2"
+        and abs(float(r["D_over_C"]) - small_split_d) < 1e-9
+        and abs(float(r["alpha_integrated"]) - 0.1) < 1e-12
+    ]
+    small_subset.sort(key=lambda r: float(r["zeta_omega_Lw_over_C"]))
+    small_numeric = [
+        (float(r["zeta_omega_Lw_over_C"]), float(r["forward_over_delta"]))
+        for r in small_subset
+    ]
+    small_born = [
+        (float(r["zeta_omega_Lw_over_C"]), float(r["born_forward_over_delta"]))
+        for r in small_subset
+    ]
+    small_color = "#2ca02c"
+    draw_polyline(draw, small_numeric, small_color, width=6, dashed=False)
+    draw_markers(draw, small_numeric, small_color)
+    draw_polyline(draw, small_born, small_color, width=5, dashed=True)
+
+    x = 310
+    y = 866
+    draw.line((x, y, x + 88, y), fill=small_color, width=6)
+    draw.text((x + 108, y - 16), "smooth wall, xi=1e-3: transfer matrix", font=f12, fill="#222")
+    dashed_line(draw, (x, y + 36, x + 88, y + 36), small_color, 5)
+    draw.text((x + 108, y + 20), "smooth wall, xi=1e-3: Born filter", font=f12, fill="#222")
 
     out = Path("figures/interface_wall_filter.png")
     img.resize((WIDTH // SCALE, HEIGHT // SCALE), Image.Resampling.LANCZOS).save(out)

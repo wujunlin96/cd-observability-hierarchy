@@ -46,3 +46,4 @@ The photon portal remains a constraint channel rather than a discovery-first rou
 
 The second external-AI review is recorded in `notes/external_ai_review_triage_v132.md`.
 The third external-AI review is recorded in `notes/external_ai_review_triage_v133.md`.
+The fourth external-AI review is recorded in `notes/external_ai_review_triage_v134.md`.

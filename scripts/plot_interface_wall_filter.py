@@ -103,8 +103,8 @@ def build_axes() -> list[str]:
         label = f"1e{int(math.log10(tick))}" if tick != 1 else "1"
         items.append(text(x0 - 12, y + 4, label, 12, "end"))
 
-    items.append(text(WIDTH / 2, 34, "Finite C-D interface as a momentum filter (D/C=2, alpha_int=0.1)", 18))
-    items.append(text(WIDTH / 2, HEIGHT - 24, "wall thickness zeta = omega L_w / C", 14))
+    items.append(text(WIDTH / 2, 34, "Finite C-D interface as a momentum filter", 18))
+    items.append(text(WIDTH / 2, HEIGHT - 24, "dimensionless wall thickness zeta = omega L_w / C", 14))
     items.append(
         '<text x="24" y="300" font-family="Arial, sans-serif" font-size="14" '
         'text-anchor="middle" fill="#222" transform="rotate(-90 24 300)">'
@@ -119,7 +119,7 @@ def build_axes() -> list[str]:
     items.append(
         f'<text x="{x_coh + 9:.1f}" y="{sy(0.03):.1f}" font-family="Arial, sans-serif" '
         'font-size="12" fill="#333" transform="rotate(-90 '
-        f'{x_coh + 9:.1f} {sy(0.03):.1f})">|k_C-k_D| L_w ~= 1</text>'
+        f'{x_coh + 9:.1f} {sy(0.03):.1f})">D/C=2 coherence: |k_C-k_D| L_w ~= 1</text>'
     )
     return items
 
@@ -129,6 +129,7 @@ def main() -> None:
     target_d = 2.0
     target_alpha = 0.1
     colors = {"square": "#1f77b4", "sech2": "#d62728"}
+    small_split_d = math.sqrt(1.0 + 1e-3)
 
     svg: list[str] = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">'
@@ -168,6 +169,36 @@ def main() -> None:
             f'stroke="{color}" stroke-width="2.4" stroke-dasharray="8 6" />'
         )
         svg.append(text(x + 54, y + 22, f"{label}: Born filter", 12, "start"))
+
+    small_subset = [
+        r
+        for r in rows
+        if r["profile"] == "sech2"
+        and abs(float(r["D_over_C"]) - small_split_d) < 1e-9
+        and abs(float(r["alpha_integrated"]) - target_alpha) < 1e-12
+    ]
+    small_subset.sort(key=lambda r: float(r["zeta_omega_Lw_over_C"]))
+    small_numeric = [
+        (float(r["zeta_omega_Lw_over_C"]), float(r["forward_over_delta"]))
+        for r in small_subset
+    ]
+    small_born = [
+        (float(r["zeta_omega_Lw_over_C"]), float(r["born_forward_over_delta"]))
+        for r in small_subset
+    ]
+    small_color = "#2ca02c"
+    svg.append(polyline(small_numeric, small_color, dashed=False))
+    svg.append(marker_points(small_numeric, small_color))
+    svg.append(polyline(small_born, small_color, dashed=True))
+    x = 530
+    y = legend_y + 2 * 44
+    svg.append(line(x, y, x + 44, y, small_color, 3.0))
+    svg.append(text(x + 54, y + 4, "smooth wall, xi=1e-3: transfer matrix", 12, "start"))
+    svg.append(
+        f'<line x1="{x:.1f}" y1="{y + 18:.1f}" x2="{x + 44:.1f}" y2="{y + 18:.1f}" '
+        f'stroke="{small_color}" stroke-width="2.4" stroke-dasharray="8 6" />'
+    )
+    svg.append(text(x + 54, y + 22, "smooth wall, xi=1e-3: Born filter", 12, "start"))
 
     svg.append("</svg>")
 
