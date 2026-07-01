@@ -2,7 +2,7 @@
 
 This repository contains the public research artifacts for the manuscript:
 
-**A C-D Observability Hierarchy for Multi-Sector Speed Constants**
+**Observability of Hidden-Sector Limiting Speed Scales: No-Go Results and Interface Phenomenology**
 
 The project studies a two-sector thought experiment in which a hidden sector is assigned an internal speed scale `D` while the visible sector uses speed scale `C`. The central claim is intentionally modest: a hidden speed ratio `D/C` is not automatically a visible second light cone. Under exact common Lorentz equivariance, smooth local sector maps, and flat relative calibration, the ratio has no local invariant visible content. Observable C-D physics must enter through controlled failure modes such as preferred hidden fields, relative holonomy, interfaces/defects, or portal-projected effective coefficients.
 

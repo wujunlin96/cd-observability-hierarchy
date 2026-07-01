@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.90in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,bm}
@@ -11,18 +11,23 @@
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
 \Urlmuskip=0mu plus 2mu\relax
 
-\title{A C-D Observability Hierarchy for Multi-Sector Speed Constants}
+\title{Observability of Hidden-Sector Limiting Speed Scales: No-Go Results and Interface Phenomenology}
 \author{Junlin Wu\\
 Independent Researcher\\
 \texttt{wujunlin96@foxmail.com}}
-\date{Draft date: 2026-07-01}
+\date{Prepared: 1 July 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Does a hidden sector with internal speed scale \(D\) leave an invariant observable imprint on a visible sector with speed scale \(C\)? We treat this as a calibration problem. Under exact local Lorentz equivariance, smooth spacetime point maps, and flat relative calibration, the ratio \(D/C\) has no local invariant visible content. A Lorentz-commuting linear map is only a scale map, a smooth Lorentz-equivariant point map preserves null rays, and a flat relative connection on a simply connected region is pure gauge. Observable C-D physics therefore requires a controlled failure mode: a preferred hidden field, relative curvature or holonomy, an interface or defect, or a portal-projected effective coefficient. We formulate a visible-relativity protection principle requiring any induced Standard-Model Lorentz violation to remain below existing bounds. As a worked escape example, a one-dimensional C-D interface shows that finite wall thickness acts as a momentum filter controlled by \(k_C-k_D\). The useful phenomenological object is not a lone delay but a constrained morphology vector linking time offset, conversion strength, coherence cutoff, and possible clock holonomy. The result is a no-go and classification framework, not evidence for a hidden D-sector spacetime.
+Can a hidden sector with limiting speed scale \(D\) leave an invariant imprint on a visible sector with speed scale \(C\)? We treat this as a calibration problem. Under exact local Lorentz equivariance, ordinary spacetime point maps, and flat relative calibration, \(D/C\) has no local invariant visible content: Lorentz-commuting linear maps are scale maps, smooth equivariant point maps preserve null rays, and flat relative connections have no contractible holonomy. Observable C-D physics must therefore identify the failed assumption: a preferred hidden field, relative curvature or topology, an interface or defect, or a portal-projected effective coefficient. The paper's contribution is a no-go hierarchy and a morphology criterion \({\cal M}_{CD}\) that tests linked delay, conversion strength, coherence cutoff, and possible clock holonomy rather than fitting a lone speed. A one-dimensional interface example shows how finite wall thickness filters conversion through \(k_C-k_D\). The result is a classification and forecast framework, not evidence for a hidden D-sector spacetime.
 \end{abstract}
+
+
+\noindent\textbf{Keywords:} hidden sectors; limiting speeds; Lorentz symmetry; observability; interface phenomenology; Standard-Model Extension
+
+
 
 \section{Introduction}
 
@@ -218,6 +223,15 @@ The symbolic-intertwiner check in the public repository finds
 
 
 and the cubic correction is proportional to \(x^2x^\mu\). Again it cannot change the null cone.
+
+
+\subsection{Scope: Spin and Internal Degrees}
+
+
+The no-go statements above are spacetime-calibration statements, not claims about every Lorentz-covariant field representation. A Standard-Model field carries spin, gauge, flavor, and other internal labels. If a map acts on a larger space such as \(S\otimes W\), where \(S\) is a spin representation and \(W\) is an internal space, its Lorentz commutant can contain chiral or internal matrices. That extra freedom can mix species, masses, or couplings, and it is exactly why portal models must be analyzed as field theories rather than as bare point maps.
+
+
+This freedom does not by itself create a second visible spacetime cone. The causal cone of a local field equation is controlled by its principal symbol. With exact local Lorentz covariance and no background tensor, the principal symbol of a first-order spinor equation has the form \(\gamma^\mu n_\mu\) times internal data up to field redefinitions; for a second-order wave equation it is proportional to \(\eta^{\mu\nu}n_\mu n_\nu\) times internal data. Species mixing can split masses or amplitudes, but a new characteristic cone requires a preferred tensor, nonlocal propagation, boundary condition, modified momentum-space structure, or portal-induced EFT coefficient in the principal symbol. Spin and internal labels are therefore not counterexamples to the hierarchy; they are the point at which the problem becomes an explicit EFT-matching problem.
 
 
 \subsection{Observation 3: Flat Relative-Connection Calibration}
@@ -527,7 +541,7 @@ With this sign convention, \(D>C\) gives a negative \(\Delta t\), i.e. an appare
 The sign of \(\Delta t\) is only a kinematic diagnostic. It is not a chronology-protection mechanism. A model with two or more separated interfaces must still specify a preferred wall foliation, a global time function for portal events, or another restriction that prevents the apparent advance from being assembled into a controllable closed causal curve.
 
 
-A minimal sufficient condition is the existence of a background time function \(T\) such that all allowed C propagation, D propagation, and interface-conversion events are future-directed with respect to \(T\). Equivalently, the wall network may define a preferred foliation and the portal matching may be restricted to equal-\(T\) slices. Then a closed controllable causal curve is excluded because every allowed segment strictly increases \(T\). This is a model assumption, not a theorem derived by the scalar interface calculation.
+A precise sufficient condition is as follows. Assume there exists a background time function \(T\) on the spacetime region containing the wall network such that every allowed C- or D-propagation segment has tangent \(v\) satisfying \(dT(v)>0\), and every interface conversion either preserves \(T\) or increases it. Then any admissible piecewise propagation-and-conversion curve has strictly increasing \(T\) along every nonzero propagation segment and nondecreasing \(T\) at conversions. Such a curve cannot be closed unless it has zero propagation length. This excludes controllable closed causal curves only inside this restricted model class; it is an added causal-ordering assumption, not a theorem derived from the scalar interface calculation.
 
 
 \subsection{Finite Wall Thickness}
@@ -613,7 +627,7 @@ A four-dimensional photon or fermion portal would not reuse this scalar model un
 It is also not a causal cosmology. If \(D>C\), a hidden segment may look like an advance in visible time. A consistent model must specify a wall frame, a global time orientation, or another causal-ordering condition that prevents controllable closed causal curves. The interface calculation only establishes flux-conserving conversion and coherence filtering in a fixed background.
 
 
-The public repository contains the delta-interface, finite-wall, and plotting scripts. In the recorded finite-wall scan, the maximum flux-conservation error is below \(5\times10^{-14}\).
+The public repository, \path{https://github.com/wujunlin96/cd-observability-hierarchy}, contains the delta-interface, finite-wall, and plotting scripts. In the recorded finite-wall scan, the maximum flux-conservation error is below \(5\times10^{-14}\).
 
 
 \subsection{Echo Morphology as a Test Program}
@@ -699,6 +713,17 @@ and, for a clock of frequency \(\nu\),
 
 
 The first equation fixes the hidden path length needed for a visible time offset. The second gives the frequency above which a wall of thickness \(L_w\) suppresses conversion by phase mismatch. The third turns a relative calibration holonomy into a clock phase step. These three relations are independent enough to be useful: a model can fit one by hand, but it is harder to fit all three without specifying the same wall, cone split, and relative connection.
+
+
+For a non-Abelian relative calibration, the scalar loop integral is replaced by the conjugacy class of the holonomy
+
+
+\[
+U_\gamma={\cal P}\exp\oint_\gamma {\cal A}.
+\]
+
+
+The gauge-invariant small-loop data are the eigenphases of \(U_\gamma\); for weak curvature, \(U_\gamma\simeq I+{\cal F}_{\mu\nu}\Sigma^{\mu\nu}\). A clock or interferometer coupled with effective charge \(q_{\rm eff}\) would see a phase scale \(q_{\rm eff}\Theta_\gamma\), where \(\Theta_\gamma\) is an eigenphase norm. This is not yet an experimental bound, but it identifies the quantity a clock-network or interferometric recast would have to constrain.
 
 
 It is useful to package the prediction as a morphology vector rather than as a single anomaly:
@@ -809,6 +834,24 @@ Relative holonomy must be separated from ordinary Weyl second-clock effects and 
 
 
 Finally, full multimetric gravity is outside this work. Generic interacting spin-2 sectors face the usual ghost and consistency issues unless special structures are imposed, and visible gravity-light speed differences are tightly constrained by GW170817/GRB170817A \citep{HassanRosen2011Bimetric,HassanRosen2011Secondary,LIGO2017GW170817GRB}.
+
+
+The practical link to existing data is therefore a recast dictionary, not a new universal bound. The table below gives the minimal quantity that must be computed before a C-D escape route can use existing constraints.
+
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth} >{\raggedright\arraybackslash}p{0.31\textwidth}@{}}
+\toprule
+Escape route & Quantity to compute & Existing boundary \\
+\midrule
+Preferred-field SME texture & low-rank coefficients such as \(c_{\mu\nu}^{(\psi)}\sim \zeta_\psi\xi u_\mu u_\nu\) & SME coefficient tables \\
+Photon portal/interface & conversion probability and coherence filter \(P_{\gamma\to D}(\nu)\) & photon/paraphoton velocity oscillation and distant-source bounds \\
+Relative holonomy & loop phase \(U_\gamma={\cal P}\exp\oint_\gamma B\) or \(\Delta\phi=2\pi\nu\delta\tau_{CD}\) & second-clock and clock-network searches \\
+Visible multimetric leakage & visible \(v_g-C\), spin-2 mixing, or multimessenger delay & GW170817/GRB170817A and bimetric consistency \\
+\bottomrule
+\end{tabularx}
+\end{center}
 
 
 Two routes are most natural after this classification paper. The interface/holonomy route should turn \({\cal M}_{CD}\) into a data-facing forecast with wall-scale priors. The SME route should choose a UV portal and replace the sketch in Appendix D by an operator-level coefficient map and loop-stability calculation.
@@ -1039,53 +1082,41 @@ The loop problem is visible already at the level of dimensional analysis. For a 
 unless a symmetry, sequestering mechanism, emergent low-energy structure, or fine tuning suppresses it. This estimate is the reason the visible-relativity protection principle is a quantitative naturalness requirement rather than a slogan.
 
 
+If an experiment bounds a relevant visible coefficient by \(|c_{\mu\nu}^{(\psi)}|<c_{\rm max}\), the schematic loop estimate gives the necessary condition
+
+
+\[
+\frac{g^2}{16\pi^2}|\xi| \lesssim c_{\rm max}
+\]
+
+
+up to portal-dependent group factors, thresholds, and tensor projections. This inequality should not be read as a universal exclusion curve. It is a diagnostic: an unsuppressed portal with \(|\xi|\sim1\) generically needs very small \(g\), a symmetry cancellation, or genuine sectoral sequestering before the visible-relativity protection principle can be credible.
+
+
 \section*{Declarations}
 
 
 \subsection*{Data and Code Availability}
 
 
-This manuscript uses analytic derivations and generated toy-model data. The public artifact repository is \path{https://github.com/wujunlin96/cd-observability-hierarchy}; a persistent archive can be minted for future versions if needed. The repository README and manifest list the scripts, tables, figure source, and package-audit commands used for this version.
+This manuscript uses analytic derivations and generated toy-model data. The public artifact repository is \path{https://github.com/wujunlin96/cd-observability-hierarchy}; a persistent archive can be minted for future versions if needed. The repository contains the LaTeX source package, bibliography, compiled PDF, generated figure, reproducibility scripts, audit outputs, and the 27-reference release bibliography used for this version.
 
 
-The release bibliography contains only the 27 references cited in the present manuscript.
+\subsection*{Ethics, Funding, and Conflicts of Interest}
 
 
-The public release includes the LaTeX source package, bibliography, compiled PDF, generated figure, reproducibility scripts, and audit outputs used for this version.
+This theoretical work uses no human participants, animal subjects, or private datasets. No external funding was received for this work. The author declares no conflicts of interest.
 
 
-\subsection*{Ethics Statement}
+\subsection*{Author Contributions and AI Assistance}
 
 
-This theoretical work uses no human participants, animal subjects, or private datasets.
-
-
-\subsection*{Funding}
-
-
-No external funding was received for this work.
-
-
-\subsection*{Conflicts of Interest}
-
-
-The author declares no conflicts of interest.
-
-
-\subsection*{Author Contributions}
-
-
-Junlin Wu supplied the motivating C-D question and research direction, reviewed the theoretical claims, and is responsible for the final interpretation and submission. AI assistance was used for mathematical organization, code generation, reproducibility checks, literature-boundary auditing, and manuscript drafting support.
-
-
-\subsection*{AI-Assistance Disclosure}
-
-
-The author used AI assistance for mathematical exploration, literature-search organization, manuscript drafting support, code generation, and internal consistency checks. The author is responsible for the final claims, interpretation, and submission.
+Junlin Wu supplied the motivating C-D question and research direction, reviewed the theoretical claims, and is responsible for the final interpretation and submission. AI assistance was used for mathematical organization, literature-search organization, code generation, reproducibility checks, literature-boundary auditing, and manuscript drafting support. The author is responsible for the final claims, interpretation, and submission.
 
 
 {\scriptsize
 \setlength{\bibsep}{0pt plus 0.3ex}
+\setlength{\bibhang}{0.4em}
 \bibliographystyle{abbrvnat}
 \bibliography{references}
 }

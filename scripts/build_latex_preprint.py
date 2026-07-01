@@ -246,19 +246,26 @@ def convert_table(lines: list[str]) -> list[str]:
     return out
 
 
-def extract_front_matter(markdown: str) -> tuple[str, str, str, list[str]]:
+def extract_front_matter(markdown: str) -> tuple[str, str, str, str, list[str]]:
     lines = markdown.splitlines()
     title = lines[0].lstrip("# ").strip()
-    draft_date = ""
+    paper_date = ""
+    keywords = ""
     for line in lines[:8]:
         if line.startswith("Draft date:"):
-            draft_date = line.split(":", 1)[1].strip()
+            paper_date = "Draft date: " + line.split(":", 1)[1].strip()
+        elif line.startswith("Prepared:"):
+            paper_date = "Prepared: " + line.split(":", 1)[1].strip()
+        elif line.startswith("Submitted:"):
+            paper_date = "Submitted: " + line.split(":", 1)[1].strip()
+        elif line.startswith("Keywords:"):
+            keywords = line.split(":", 1)[1].strip()
 
     abstract_start = lines.index("## Abstract") + 1
     intro_start = next(i for i, line in enumerate(lines) if line.startswith("## 1."))
     abstract = " ".join(line.strip() for line in lines[abstract_start:intro_start] if line.strip())
     body = lines[intro_start:]
-    return title, draft_date, abstract, body
+    return title, paper_date, keywords, abstract, body
 
 
 def convert_body(lines: list[str]) -> str:
@@ -391,13 +398,19 @@ def convert_body(lines: list[str]) -> str:
 
 def latex_document(
     title: str,
-    draft_date: str,
+    paper_date: str,
+    keywords: str,
     abstract: str,
     body: str,
     metadata: dict[str, str | bool],
 ) -> str:
+    keywords_block = (
+        "\n\n" + r"\noindent\textbf{Keywords:} " + convert_inline(keywords) + "\n\n"
+        if keywords
+        else ""
+    )
     return rf"""\documentclass[11pt]{{article}}
-\usepackage[margin=1in]{{geometry}}
+\usepackage[margin=0.90in]{{geometry}}
 \usepackage[T1]{{fontenc}}
 \usepackage[utf8]{{inputenc}}
 \usepackage{{amsmath,amssymb,bm}}
@@ -411,7 +424,7 @@ def latex_document(
 
 \title{{{convert_inline(title)}}}
 \author{{{author_latex(metadata)}}}
-\date{{Draft date: {convert_inline(draft_date)}}}
+\date{{{convert_inline(paper_date)}}}
 
 \begin{{document}}
 \maketitle
@@ -419,11 +432,13 @@ def latex_document(
 \begin{{abstract}}
 {convert_inline(abstract)}
 \end{{abstract}}
+{keywords_block}
 
 {body}
 
 {{\scriptsize
 \setlength{{\bibsep}}{{0pt plus 0.3ex}}
+\setlength{{\bibhang}}{{0.4em}}
 \bibliographystyle{{abbrvnat}}
 \bibliography{{references}}
 }}
@@ -471,12 +486,12 @@ MANIFEST.txt
 def main() -> None:
     metadata = load_submission_metadata()
     markdown = apply_submission_metadata(DRAFT.read_text(encoding="utf-8"), metadata)
-    title, draft_date, abstract, body_lines = extract_front_matter(markdown)
+    title, paper_date, keywords, abstract, body_lines = extract_front_matter(markdown)
     body = convert_body(body_lines)
 
     (OUT / "figures").mkdir(parents=True, exist_ok=True)
     (OUT / "main.tex").write_text(
-        latex_document(title, draft_date, abstract, body, metadata), encoding="utf-8"
+        latex_document(title, paper_date, keywords, abstract, body, metadata), encoding="utf-8"
     )
     shutil.copy2(USED_BIB, OUT / "references.bib")
     shutil.copy2(FIGURE_PNG, OUT / "figures" / "interface_wall_filter.png")
